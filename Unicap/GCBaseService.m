@@ -16,6 +16,9 @@
             completition:(void (^)(id))completition
                  failure:(void (^)(NSError *))failure {
     
+    logInfo(@"params %@",params);
+    logInfo(@"url: ",url);
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];

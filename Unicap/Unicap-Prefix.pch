@@ -14,5 +14,7 @@
 
 
 #import "GCLogger.h"
+#import "GCRequestUtils.h"
+#import "GCStudentCredentials.h"
 
 #endif

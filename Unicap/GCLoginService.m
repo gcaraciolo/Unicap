@@ -11,7 +11,6 @@
 #import <AFNetworking/AFNetworking.h>
 
 #import "GCBaseService.h"
-#import "GCRequestUtils.h"
 #import "GCStudentCredentials.h"
 
 #define FORM @"form"

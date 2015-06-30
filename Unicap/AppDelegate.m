@@ -7,17 +7,16 @@
 //
 
 #import "AppDelegate.h"
-#import <RESideMenu.h>
 
 #import "GCLeftMenuViewController.h"
 #import "GCPanelViewController.h"
+#import "GCLoginViewController.h"
 
 @interface AppDelegate () <RESideMenuDelegate>
 
-@property (strong, nonatomic) RESideMenu *sideMenuViewController;
-
 @property (strong, nonatomic) GCLeftMenuViewController *leftMenuViewController;
 @property (strong, nonatomic) UINavigationController *navigationController;
+@property (strong, nonatomic) GCLoginViewController *loginViewController;
 
 
 @end
@@ -147,6 +146,8 @@
                              initWithRootViewController:[storyboard instantiateInitialViewController]];
     
     _leftMenuViewController = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([GCLeftMenuViewController class])];
+    
+    _loginViewController = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([GCLoginViewController class])];
 }
 
 #pragma mark - ResideMenu
@@ -167,7 +168,12 @@
     [_sideMenuViewController setContentViewInPortraitOffsetCenterX:([[UIScreen mainScreen] bounds].size.width)*0.2125];
     
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [_window setRootViewController:_sideMenuViewController];
+    if ([GCStudentCredentials sharedInstance].sessionID) {
+        [_window setRootViewController:_sideMenuViewController];
+    } else {
+        [_window setRootViewController:_loginViewController];
+    }
+
     [_window setBackgroundColor:[UIColor whiteColor]];
     [_window makeKeyAndVisible];
 }

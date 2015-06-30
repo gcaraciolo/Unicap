@@ -25,6 +25,7 @@
 		AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B991B419BB3000728D5 /* GCLoginViewController.m */; };
 		ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF31801B41C57D00BB12BE /* GCBaseService.m */; };
 		ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC663B1B42D9550055D494 /* GCLogger.m */; };
+		ACDC66421B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC66411B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m */; };
 		ADB3F3A02D55A4FEB8BE76DE /* libPods-Unicap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,8 @@
 		ACDC663A1B42D9550055D494 /* GCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLogger.h; sourceTree = "<group>"; };
 		ACDC663B1B42D9550055D494 /* GCLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLogger.m; sourceTree = "<group>"; };
 		ACDC663D1B42D9EC0055D494 /* Unicap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unicap-Prefix.pch"; sourceTree = "<group>"; };
+		ACDC66401B42EEA20055D494 /* GCGradesFromCurrentPeriodService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCGradesFromCurrentPeriodService.h; sourceTree = "<group>"; };
+		ACDC66411B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCGradesFromCurrentPeriodService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +131,6 @@
 		72BACBD61B42153900E49DCD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				ACDC66381B42D93D0055D494 /* Logger */,
 				72BACBE21B42279D00E49DCD /* Error */,
 				72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */,
 				72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */,
@@ -215,6 +217,7 @@
 			children = (
 				AC391B6E1B41987F000728D5 /* AppDelegate.h */,
 				AC391B6F1B41987F000728D5 /* AppDelegate.m */,
+				ACDC663E1B42E7710055D494 /* Utils */,
 				72BACBD11B4213CE00E49DCD /* Model */,
 				AC391B931B419903000728D5 /* Service */,
 				AC391B971B419B8D000728D5 /* ViewControllers */,
@@ -258,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				72BACBD61B42153900E49DCD /* Utils */,
+				ACDC663F1B42E9D00055D494 /* Grades from current period */,
 				ACBF317E1B41C55B00BB12BE /* Base */,
 				ACBF317D1B41C54E00BB12BE /* Login */,
 			);
@@ -308,6 +312,23 @@
 				ACDC663B1B42D9550055D494 /* GCLogger.m */,
 			);
 			name = Logger;
+			sourceTree = "<group>";
+		};
+		ACDC663E1B42E7710055D494 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ACDC66381B42D93D0055D494 /* Logger */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		ACDC663F1B42E9D00055D494 /* Grades from current period */ = {
+			isa = PBXGroup;
+			children = (
+				ACDC66401B42EEA20055D494 /* GCGradesFromCurrentPeriodService.h */,
+				ACDC66411B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m */,
+			);
+			name = "Grades from current period";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -453,6 +474,7 @@
 				AC391B701B41987F000728D5 /* AppDelegate.m in Sources */,
 				ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */,
 				AC391B6D1B41987F000728D5 /* main.m in Sources */,
+				ACDC66421B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m in Sources */,
 				AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */,
 				AC391B961B419929000728D5 /* GCLoginService.m in Sources */,
 				72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */,

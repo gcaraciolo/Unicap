@@ -7,7 +7,26 @@
 //
 
 #import "GCPanelViewController.h"
+#import "GCGradesFromCurrentPeriodService.h"
 
 @implementation GCPanelViewController
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    GCGradesFromCurrentPeriodService *currentGrandes = [GCGradesFromCurrentPeriodService new];
+    [currentGrandes getGradesFromCurrentPeriodWithCompletition:^(bool succeded) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
+    
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    
+}
 
 @end

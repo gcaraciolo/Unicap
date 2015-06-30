@@ -25,7 +25,7 @@ NSString *const kPASSWORD                               = @"Senha";
 
 NSString *const kROUTINE_LOGIN                          = @"1";
 NSString *const kROUTINE_PERSONAL                       = @"2";
-NSString *const kROUTINE_SUBJECTS_ACTUAL                = @"14";
+NSString *const kROUTINE_CURRENT_SUBJECTS               = @"14";
 NSString *const kROUTINE_SUBJECTS_PAST                  = @"5";
 NSString *const kROUTINE_SUBJECTS_PENDING               = @"6";
 NSString *const kROUTINE_SUBJECTS_TESTS                 = @"4";
