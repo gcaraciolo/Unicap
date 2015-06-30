@@ -16,8 +16,8 @@
             completition:(void (^)(id))completition
                  failure:(void (^)(NSError *))failure {
     
-    logInfo(@"params %@",params);
-    logInfo(@"url: ",url);
+    GCLoggerInfo(@"params %@",params);
+    GCLoggerInfo(@"url %@",url);
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     

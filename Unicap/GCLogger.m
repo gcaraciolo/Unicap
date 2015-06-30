@@ -8,18 +8,61 @@
 
 #import "GCLogger.h"
 
+static BOOL DEBUG_MODE = NO;
+
 @implementation GCLogger
 
-void logDebug(NSString *msg, ...) {
-    NSLog(@"DEBUG - %@", msg);
++(void)setLogOn:(BOOL)logOn {
+    DEBUG_MODE=logOn;
 }
 
-void logInfo(NSString *msg, ...) {
-    NSLog(@"INFO - %@", msg);
++(void)initialize {
+    char * env=getenv("DEBUG_MODE");
+    if(strcmp(env==NULL?"":env,"NO")!=0)
+        DEBUG_MODE=YES;
 }
 
-void logError(NSString *msg, ...) {
-    NSLog(@"Error - %@", msg);
+
++(void)logFileInfo:(char*)sourceFile lineNumber:(int)lineNumber
+        format:(NSString*)format, ...;
+{
+    va_list ap;
+    NSString *print,*file;
+    if(DEBUG_MODE==NO)
+        return;
+    va_start(ap,format);
+    file=[[NSString alloc] initWithBytes:sourceFile
+                                  length:strlen(sourceFile)
+                                encoding:NSUTF8StringEncoding];
+    print=[[NSString alloc] initWithFormat:format arguments:ap];
+    va_end(ap);
+    //NSLog handles synchronization issues
+    NSLog(@"%@ - %s:%d %@", @"INFO", [[file lastPathComponent] UTF8String],
+          lineNumber,print);
+    
+    return;
 }
+
++(void)logFileError:(char*)sourceFile lineNumber:(int)lineNumber
+            format:(NSString*)format, ...;
+{
+    va_list ap;
+    NSString *print,*file;
+    if(DEBUG_MODE==NO)
+        return;
+    va_start(ap,format);
+    file=[[NSString alloc] initWithBytes:sourceFile
+                                  length:strlen(sourceFile)
+                                encoding:NSUTF8StringEncoding];
+    print=[[NSString alloc] initWithFormat:format arguments:ap];
+    va_end(ap);
+    //NSLog handles synchronization issues
+    NSLog(@"%@ - %s:%d %@", @"ERROR", [[file lastPathComponent] UTF8String],
+          lineNumber,print);
+    
+    return;
+}
+
+
 
 @end

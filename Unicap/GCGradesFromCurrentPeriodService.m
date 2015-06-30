@@ -22,9 +22,9 @@
     [urlAuth appendString:[GCStudentCredentials sharedInstance].sessionID];
     
     [GCBaseService doGETRequestURL:urlAuth params:params completition:^(id response) {
-        logInfo(@"%@",response);
+        GCLoggerInfo(@"%@",response);
     } failure:^(NSError *error) {
-        logError(@"%@", error);
+        GCLoggerError(@"%@", error);
     }];
 
     

@@ -10,8 +10,9 @@
 
 @interface GCLogger : NSObject
 
-void logDebug(NSString *msg, ...);
-void logInfo(NSString *msg, ...);
-void logError(NSString *msg, ...);
++(void)logFileInfo:(char*)sourceFile lineNumber:(int)lineNumber
+            format:(NSString*)format, ...;
++(void)logFileError:(char*)sourceFile lineNumber:(int)lineNumber
+             format:(NSString*)format, ...;
 
 @end

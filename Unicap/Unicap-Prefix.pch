@@ -12,9 +12,24 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
-
 #import "GCLogger.h"
 #import "GCRequestUtils.h"
 #import "GCStudentCredentials.h"
+
+
+
+/************ LOGGER **********/
+
+#define GCLoggerInfo(s,...) \
+[GCLogger logFileInfo:__FILE__ lineNumber:__LINE__ \
+format:(s),##__VA_ARGS__]
+
+#define GCLoggerError(s,...) \
+[GCLogger logFileError:__FILE__ lineNumber:__LINE__ \
+format:(s),##__VA_ARGS__]
+
+
+
+/************ LOGGER **********/
 
 #endif
