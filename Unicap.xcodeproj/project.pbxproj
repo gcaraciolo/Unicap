@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBD31B42140000E49DCD /* GCStudentCredentials.m */; };
+		72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */; };
+		72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBE41B4227B600E49DCD /* GCRequestError.m */; };
+		72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEA1B42A18D00E49DCD /* GCStudent.m */; };
+		72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEE1B42A28700E49DCD /* GCSubject.m */; };
+		72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBF51B42AB1C00E49DCD /* GCLeftMenuViewController.m */; };
+		72BACBFA1B42AB7700E49DCD /* GCPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBF91B42AB7700E49DCD /* GCPanelViewController.m */; };
+		AC391B6D1B41987F000728D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B6C1B41987F000728D5 /* main.m */; };
+		AC391B701B41987F000728D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B6F1B41987F000728D5 /* AppDelegate.m */; };
+		AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC391B711B419880000728D5 /* Unicap.xcdatamodeld */; };
+		AC391B791B419880000728D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC391B771B419880000728D5 /* Main.storyboard */; };
+		AC391B7B1B419880000728D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC391B7A1B419880000728D5 /* Images.xcassets */; };
+		AC391B7E1B419880000728D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC391B7C1B419880000728D5 /* LaunchScreen.xib */; };
+		AC391B8A1B419880000728D5 /* UnicapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B891B419880000728D5 /* UnicapTests.m */; };
+		AC391B961B419929000728D5 /* GCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B951B419929000728D5 /* GCLoginService.m */; };
+		AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B991B419BB3000728D5 /* GCLoginViewController.m */; };
+		ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF31801B41C57D00BB12BE /* GCBaseService.m */; };
+		ADB3F3A02D55A4FEB8BE76DE /* libPods-Unicap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC391B841B419880000728D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC391B5F1B41987F000728D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC391B661B41987F000728D5;
+			remoteInfo = Unicap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Unicap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D36A060BC58C6F958717B82 /* Pods-Unicap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unicap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unicap/Pods-Unicap.release.xcconfig"; sourceTree = "<group>"; };
+		72BACBD21B42140000E49DCD /* GCStudentCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentCredentials.h; sourceTree = "<group>"; };
+		72BACBD31B42140000E49DCD /* GCStudentCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentCredentials.m; sourceTree = "<group>"; };
+		72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestUtils.h; sourceTree = "<group>"; };
+		72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequestUtils.m; sourceTree = "<group>"; };
+		72BACBE31B4227B600E49DCD /* GCRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestError.h; sourceTree = "<group>"; };
+		72BACBE41B4227B600E49DCD /* GCRequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequestError.m; sourceTree = "<group>"; };
+		72BACBE91B42A18D00E49DCD /* GCStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudent.h; sourceTree = "<group>"; };
+		72BACBEA1B42A18D00E49DCD /* GCStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudent.m; sourceTree = "<group>"; };
+		72BACBED1B42A28700E49DCD /* GCSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSubject.h; sourceTree = "<group>"; };
+		72BACBEE1B42A28700E49DCD /* GCSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCSubject.m; sourceTree = "<group>"; };
+		72BACBF41B42AB1C00E49DCD /* GCLeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLeftMenuViewController.h; sourceTree = "<group>"; };
+		72BACBF51B42AB1C00E49DCD /* GCLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLeftMenuViewController.m; sourceTree = "<group>"; };
+		72BACBF81B42AB7700E49DCD /* GCPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPanelViewController.h; sourceTree = "<group>"; };
+		72BACBF91B42AB7700E49DCD /* GCPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPanelViewController.m; sourceTree = "<group>"; };
+		97E43F6227A4BA07C5C2C831 /* Pods-Unicap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unicap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unicap/Pods-Unicap.debug.xcconfig"; sourceTree = "<group>"; };
+		AC391B671B41987F000728D5 /* Unicap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unicap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC391B6B1B41987F000728D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC391B6C1B41987F000728D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC391B6E1B41987F000728D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC391B6F1B41987F000728D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC391B721B419880000728D5 /* Unicap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Unicap.xcdatamodel; sourceTree = "<group>"; };
+		AC391B781B419880000728D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC391B7A1B419880000728D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		AC391B7D1B419880000728D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		AC391B831B419880000728D5 /* UnicapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnicapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC391B881B419880000728D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC391B891B419880000728D5 /* UnicapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnicapTests.m; sourceTree = "<group>"; };
+		AC391B941B419929000728D5 /* GCLoginService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLoginService.h; sourceTree = "<group>"; };
+		AC391B951B419929000728D5 /* GCLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLoginService.m; sourceTree = "<group>"; };
+		AC391B981B419BB3000728D5 /* GCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLoginViewController.h; sourceTree = "<group>"; };
+		AC391B991B419BB3000728D5 /* GCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLoginViewController.m; sourceTree = "<group>"; };
+		ACBF317F1B41C57D00BB12BE /* GCBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCBaseService.h; sourceTree = "<group>"; };
+		ACBF31801B41C57D00BB12BE /* GCBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCBaseService.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC391B641B41987F000728D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADB3F3A02D55A4FEB8BE76DE /* libPods-Unicap.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC391B801B419880000728D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A2D216226709C7067C13C2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17E6931863F248BCEC82B0C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97E43F6227A4BA07C5C2C831 /* Pods-Unicap.debug.xcconfig */,
+				5D36A060BC58C6F958717B82 /* Pods-Unicap.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		72BACBD11B4213CE00E49DCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBE61B42A16100E49DCD /* Auth */,
+				72BACBE71B42A16C00E49DCD /* Student */,
+				72BACBEC1B42A26000E49DCD /* Subject */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		72BACBD61B42153900E49DCD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBE21B42279D00E49DCD /* Error */,
+				72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */,
+				72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		72BACBE21B42279D00E49DCD /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBE31B4227B600E49DCD /* GCRequestError.h */,
+				72BACBE41B4227B600E49DCD /* GCRequestError.m */,
+			);
+			name = Error;
+			sourceTree = "<group>";
+		};
+		72BACBE61B42A16100E49DCD /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBD21B42140000E49DCD /* GCStudentCredentials.h */,
+				72BACBD31B42140000E49DCD /* GCStudentCredentials.m */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		72BACBE71B42A16C00E49DCD /* Student */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBE91B42A18D00E49DCD /* GCStudent.h */,
+				72BACBEA1B42A18D00E49DCD /* GCStudent.m */,
+			);
+			name = Student;
+			sourceTree = "<group>";
+		};
+		72BACBEC1B42A26000E49DCD /* Subject */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBED1B42A28700E49DCD /* GCSubject.h */,
+				72BACBEE1B42A28700E49DCD /* GCSubject.m */,
+			);
+			name = Subject;
+			sourceTree = "<group>";
+		};
+		72BACBF01B42A6D500E49DCD /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBF41B42AB1C00E49DCD /* GCLeftMenuViewController.h */,
+				72BACBF51B42AB1C00E49DCD /* GCLeftMenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		72BACBF71B42AB6100E49DCD /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBF81B42AB7700E49DCD /* GCPanelViewController.h */,
+				72BACBF91B42AB7700E49DCD /* GCPanelViewController.m */,
+			);
+			name = Panel;
+			sourceTree = "<group>";
+		};
+		AC391B5E1B41987F000728D5 = {
+			isa = PBXGroup;
+			children = (
+				AC391B691B41987F000728D5 /* Unicap */,
+				AC391B861B419880000728D5 /* UnicapTests */,
+				AC391B681B41987F000728D5 /* Products */,
+				17E6931863F248BCEC82B0C2 /* Pods */,
+				0A2D216226709C7067C13C2A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AC391B681B41987F000728D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC391B671B41987F000728D5 /* Unicap.app */,
+				AC391B831B419880000728D5 /* UnicapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC391B691B41987F000728D5 /* Unicap */ = {
+			isa = PBXGroup;
+			children = (
+				AC391B6E1B41987F000728D5 /* AppDelegate.h */,
+				AC391B6F1B41987F000728D5 /* AppDelegate.m */,
+				72BACBD11B4213CE00E49DCD /* Model */,
+				AC391B931B419903000728D5 /* Service */,
+				AC391B971B419B8D000728D5 /* ViewControllers */,
+				AC391B771B419880000728D5 /* Main.storyboard */,
+				AC391B7A1B419880000728D5 /* Images.xcassets */,
+				AC391B7C1B419880000728D5 /* LaunchScreen.xib */,
+				AC391B711B419880000728D5 /* Unicap.xcdatamodeld */,
+				AC391B6A1B41987F000728D5 /* Supporting Files */,
+			);
+			path = Unicap;
+			sourceTree = "<group>";
+		};
+		AC391B6A1B41987F000728D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC391B6B1B41987F000728D5 /* Info.plist */,
+				AC391B6C1B41987F000728D5 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC391B861B419880000728D5 /* UnicapTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC391B891B419880000728D5 /* UnicapTests.m */,
+				AC391B871B419880000728D5 /* Supporting Files */,
+			);
+			path = UnicapTests;
+			sourceTree = "<group>";
+		};
+		AC391B871B419880000728D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				AC391B881B419880000728D5 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC391B931B419903000728D5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBD61B42153900E49DCD /* Utils */,
+				ACBF317E1B41C55B00BB12BE /* Base */,
+				ACBF317D1B41C54E00BB12BE /* Login */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		AC391B971B419B8D000728D5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				72BACBF71B42AB6100E49DCD /* Panel */,
+				72BACBF01B42A6D500E49DCD /* Menu */,
+				AC391B9B1B419BC5000728D5 /* Login */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		AC391B9B1B419BC5000728D5 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AC391B981B419BB3000728D5 /* GCLoginViewController.h */,
+				AC391B991B419BB3000728D5 /* GCLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		ACBF317D1B41C54E00BB12BE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AC391B941B419929000728D5 /* GCLoginService.h */,
+				AC391B951B419929000728D5 /* GCLoginService.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		ACBF317E1B41C55B00BB12BE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ACBF317F1B41C57D00BB12BE /* GCBaseService.h */,
+				ACBF31801B41C57D00BB12BE /* GCBaseService.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC391B661B41987F000728D5 /* Unicap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC391B8D1B419880000728D5 /* Build configuration list for PBXNativeTarget "Unicap" */;
+			buildPhases = (
+				DFA32015A662D65CCB15D3E4 /* Check Pods Manifest.lock */,
+				AC391B631B41987F000728D5 /* Sources */,
+				AC391B641B41987F000728D5 /* Frameworks */,
+				AC391B651B41987F000728D5 /* Resources */,
+				974A16751AC35BCAD1DAABDB /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Unicap;
+			productName = Unicap;
+			productReference = AC391B671B41987F000728D5 /* Unicap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC391B821B419880000728D5 /* UnicapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC391B901B419880000728D5 /* Build configuration list for PBXNativeTarget "UnicapTests" */;
+			buildPhases = (
+				AC391B7F1B419880000728D5 /* Sources */,
+				AC391B801B419880000728D5 /* Frameworks */,
+				AC391B811B419880000728D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC391B851B419880000728D5 /* PBXTargetDependency */,
+			);
+			name = UnicapTests;
+			productName = UnicapTests;
+			productReference = AC391B831B419880000728D5 /* UnicapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC391B5F1B41987F000728D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Guilherme Caraciolo";
+				TargetAttributes = {
+					AC391B661B41987F000728D5 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					AC391B821B419880000728D5 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = AC391B661B41987F000728D5;
+					};
+				};
+			};
+			buildConfigurationList = AC391B621B41987F000728D5 /* Build configuration list for PBXProject "Unicap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC391B5E1B41987F000728D5;
+			productRefGroup = AC391B681B41987F000728D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC391B661B41987F000728D5 /* Unicap */,
+				AC391B821B419880000728D5 /* UnicapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC391B651B41987F000728D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC391B791B419880000728D5 /* Main.storyboard in Resources */,
+				AC391B7E1B419880000728D5 /* LaunchScreen.xib in Resources */,
+				AC391B7B1B419880000728D5 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC391B811B419880000728D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		974A16751AC35BCAD1DAABDB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Unicap/Pods-Unicap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA32015A662D65CCB15D3E4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC391B631B41987F000728D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */,
+				AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */,
+				72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */,
+				72BACBFA1B42AB7700E49DCD /* GCPanelViewController.m in Sources */,
+				AC391B701B41987F000728D5 /* AppDelegate.m in Sources */,
+				ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */,
+				AC391B6D1B41987F000728D5 /* main.m in Sources */,
+				AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */,
+				AC391B961B419929000728D5 /* GCLoginService.m in Sources */,
+				72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */,
+				72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */,
+				72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */,
+				72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC391B7F1B419880000728D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC391B8A1B419880000728D5 /* UnicapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC391B851B419880000728D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC391B661B41987F000728D5 /* Unicap */;
+			targetProxy = AC391B841B419880000728D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC391B771B419880000728D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC391B781B419880000728D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC391B7C1B419880000728D5 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC391B7D1B419880000728D5 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC391B8B1B419880000728D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC391B8C1B419880000728D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC391B8E1B419880000728D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97E43F6227A4BA07C5C2C831 /* Pods-Unicap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Unicap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AC391B8F1B419880000728D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D36A060BC58C6F958717B82 /* Pods-Unicap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Unicap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AC391B911B419880000728D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UnicapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unicap.app/Unicap";
+			};
+			name = Debug;
+		};
+		AC391B921B419880000728D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UnicapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Unicap.app/Unicap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC391B621B41987F000728D5 /* Build configuration list for PBXProject "Unicap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC391B8B1B419880000728D5 /* Debug */,
+				AC391B8C1B419880000728D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC391B8D1B419880000728D5 /* Build configuration list for PBXNativeTarget "Unicap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC391B8E1B419880000728D5 /* Debug */,
+				AC391B8F1B419880000728D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC391B901B419880000728D5 /* Build configuration list for PBXNativeTarget "UnicapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC391B911B419880000728D5 /* Debug */,
+				AC391B921B419880000728D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC391B711B419880000728D5 /* Unicap.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC391B721B419880000728D5 /* Unicap.xcdatamodel */,
+			);
+			currentVersion = AC391B721B419880000728D5 /* Unicap.xcdatamodel */;
+			path = Unicap.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = AC391B5F1B41987F000728D5 /* Project object */;
+}
