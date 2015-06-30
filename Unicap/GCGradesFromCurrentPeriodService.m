@@ -8,6 +8,7 @@
 
 #import "GCGradesFromCurrentPeriodService.h"
 #import "GCBaseService.h"
+#import <HTMLReader/HTMLReader.h>
 
 @implementation GCGradesFromCurrentPeriodService
 
@@ -22,12 +23,28 @@
     [urlAuth appendString:[GCStudentCredentials sharedInstance].sessionID];
     
     [GCBaseService doGETRequestURL:urlAuth params:params completition:^(id response) {
-        GCLoggerInfo(@"%@",response);
+
+        HTMLDocument *document = [HTMLDocument documentWithData:response
+                                contentTypeHeader:kREQUEST_CONTENT_TYPE];
+        
+        [self getCoefficient:document];
+        
+        
     } failure:^(NSError *error) {
         GCLoggerError(@"%@", error);
     }];
 
     
 }
+
+
+-(void)getCoefficient:(HTMLDocument *)document {
+    
+    
+    NSArray *coefficient = [document nodesMatchingSelector:@".tab_aluno_texto"];
+    GCLoggerInfo(@"%@",coefficient);   
+    
+}
+
 
 @end
