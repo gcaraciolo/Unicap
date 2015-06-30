@@ -25,40 +25,37 @@
 @implementation GCLoginService
 
 
--(void)createURLForLoginWithCompletition:(void (^)(NSString *))completition {
+-(void)createURLForLoginWithCompletition:(void (^)(NSString *))completition
+                                 failure:(void (^)(bool))failure{
 
     NSURL *URL = [NSURL URLWithString:kREQUEST_BASE_URL];
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithURL:URL completionHandler:
       ^(NSData *data, NSURLResponse *response, NSError *error) {
-          
-           @try {
                
-               NSString *contentType = nil;
-               if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-                   NSDictionary *headers = [(NSHTTPURLResponse *)response allHeaderFields];
-                   contentType = headers[CONTENT_TYPE];
-               }
+           NSString *contentType = nil;
+           if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+               NSDictionary *headers = [(NSHTTPURLResponse *)response allHeaderFields];
+               contentType = headers[CONTENT_TYPE];
+           }
+      
+           HTMLDocument *document = [HTMLDocument documentWithData:data
+                                                 contentTypeHeader:contentType];
+      
+           
+           //get token
+           NSDictionary *formNode = [[document firstNodeMatchingSelector:FORM] attributes];
+           NSString *temporarySessionID = formNode[ACTION];
           
-               HTMLDocument *document = [HTMLDocument documentWithData:data
-                                                     contentTypeHeader:contentType];
-          
-               
-               //get token
-               NSDictionary *formNode = [[document firstNodeMatchingSelector:FORM] attributes];
-               NSString *temporarySessionID = formNode[ACTION];
-               
-               //construct full url for request
-               NSMutableString *loginURL = [NSMutableString new];
-               [loginURL appendString:kREQUEST_BASE_URL];
-               [loginURL appendString:temporarySessionID];
-            
-               completition(loginURL);
+          if (!formNode) {
+              failure(YES);
+          } else {
+              //construct full url for request
+              NSMutableString *loginURL = [NSMutableString new];
+              [loginURL appendString:kREQUEST_BASE_URL];
+              [loginURL appendString:temporarySessionID];
               
-          }
-          @catch (NSException *exception) {
-              //TODO: Create a custom exception for login action
-              @throw exception;
+              completition(loginURL);
           }
           
       }] resume];
@@ -100,6 +97,8 @@
             failure(error);
         }];
         
+    } failure:^(bool error) {
+        GCLoggerError(@"error when construct session string");
     }];
 }
 

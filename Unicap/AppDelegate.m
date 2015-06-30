@@ -26,6 +26,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    //TODO: remove later
+    [GCStudentCredentials sharedInstance];
     [self instantiateViewControllers];
     [self createMenu];
     

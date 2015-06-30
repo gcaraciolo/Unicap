@@ -10,4 +10,25 @@
 
 @implementation GCStudent
 
+//TODO: core data
++(instancetype)sharedInstance {
+    static id sharedInstance;
+    @synchronized(self) {
+        if ( ! sharedInstance )
+            sharedInstance = [GCStudent new];
+    }
+    return sharedInstance;
+}
+
+-(void)saveCourseCoefficient:(NSNumber *)courseCoefficient
+          andLastCoefficient:(NSNumber *)lastCoefficient {
+    
+    
+    self.courseCoefficient = courseCoefficient;
+    self.lastCoefficient   = lastCoefficient;
+    
+    
+}
+
+
 @end

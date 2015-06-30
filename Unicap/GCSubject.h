@@ -7,14 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GCStudent.h"
 
 @interface GCSubject : NSObject
 
-@property (strong, nonatomic) NSString *student;
-@property (strong, nonatomic) NSString *code;
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSNumber *workload;
-@property (strong, nonatomic) NSNumber *credits;
-@property (strong, nonatomic) NSNumber *period;
+@property (strong, nonatomic) GCStudent *student;
+@property (strong, nonatomic) NSString  *code;
+@property (strong, nonatomic) NSString  *name;
+@property (strong, nonatomic) NSNumber  *workload;
+@property (strong, nonatomic) NSNumber  *credits;
+@property (nonatomic)         BOOL      *attended;
+@property (strong, nonatomic) NSDate    *studiedIn;
+@property (strong, nonatomic) NSString  *classCode;
+@property (strong, nonatomic) NSNumber  *period;
+@property (strong, nonatomic) NSNumber  *firstGrade;
+@property (strong, nonatomic) NSNumber  *secondeGrade;
+@property (strong, nonatomic) NSNumber  *average;
+@property (strong, nonatomic) NSNumber  *finalGrade;
+@property (strong, nonatomic) NSNumber  *finalAverage;
+@property (strong, nonatomic) NSNumber  *situation;
+
+
 
 @end

@@ -14,6 +14,7 @@
 		72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEE1B42A28700E49DCD /* GCSubject.m */; };
 		72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBF51B42AB1C00E49DCD /* GCLeftMenuViewController.m */; };
 		72BACBFA1B42AB7700E49DCD /* GCPanelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBF91B42AB7700E49DCD /* GCPanelViewController.m */; };
+		72BACBFE1B4332C700E49DCD /* GCUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBFD1B4332C700E49DCD /* GCUtils.m */; };
 		AC391B6D1B41987F000728D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B6C1B41987F000728D5 /* main.m */; };
 		AC391B701B41987F000728D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B6F1B41987F000728D5 /* AppDelegate.m */; };
 		AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC391B711B419880000728D5 /* Unicap.xcdatamodeld */; };
@@ -56,6 +57,8 @@
 		72BACBF51B42AB1C00E49DCD /* GCLeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLeftMenuViewController.m; sourceTree = "<group>"; };
 		72BACBF81B42AB7700E49DCD /* GCPanelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPanelViewController.h; sourceTree = "<group>"; };
 		72BACBF91B42AB7700E49DCD /* GCPanelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPanelViewController.m; sourceTree = "<group>"; };
+		72BACBFC1B4332C700E49DCD /* GCUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCUtils.h; sourceTree = "<group>"; };
+		72BACBFD1B4332C700E49DCD /* GCUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCUtils.m; sourceTree = "<group>"; };
 		97E43F6227A4BA07C5C2C831 /* Pods-Unicap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unicap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unicap/Pods-Unicap.debug.xcconfig"; sourceTree = "<group>"; };
 		AC391B671B41987F000728D5 /* Unicap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unicap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC391B6B1B41987F000728D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -318,6 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				ACDC66381B42D93D0055D494 /* Logger */,
+				72BACBFC1B4332C700E49DCD /* GCUtils.h */,
+				72BACBFD1B4332C700E49DCD /* GCUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -481,6 +486,7 @@
 				72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */,
 				72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */,
 				72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */,
+				72BACBFE1B4332C700E49DCD /* GCUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
