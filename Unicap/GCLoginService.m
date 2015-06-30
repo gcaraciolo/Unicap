@@ -69,7 +69,6 @@
                        failure:(void (^)(NSError *error))failure {
     
     HTMLDocument *__block document;
-    @try {
         [self createURLForLoginWithCompletition:^(NSString *fullURL) {
                 
             NSMutableDictionary *params = [NSMutableDictionary new];
@@ -124,15 +123,11 @@
                 NSString *permanentSessionID = formNode[ACTION];
                 [GCStudentCredentials sharedInstance].sessionID = permanentSessionID;
                 completition(YES);
+            } failure:^(NSError *error) {
+                failure(error);
             }];
             
         }];
-
-    }
-    @catch (NSException *exception) {
-        @throw exception;
-    }
-    
 }
 
 @end

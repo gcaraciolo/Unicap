@@ -13,6 +13,7 @@
 
 + (void) doGETRequestURL:(NSString *)url
                   params:(NSDictionary *)params
-            completition:(void (^)(id))completition;
+            completition:(void (^)(id))completition
+                 failure:(void (^)(NSError *))failure;
 
 @end

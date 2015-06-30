@@ -12,8 +12,9 @@
 @implementation GCBaseService
 
 + (void) doGETRequestURL:(NSString *)url
-                   params:(NSDictionary *)params
-             completition:(void (^)(id))completition {
+                  params:(NSDictionary *)params
+            completition:(void (^)(id))completition
+                 failure:(void (^)(NSError *))failure {
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -24,10 +25,7 @@
         id response = responseObject;
         completition(response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        
-        //TODO: create exception
-        NSException *exception = [NSException new];
-        @throw exception;
+        failure(error);
     }];
 }
 
