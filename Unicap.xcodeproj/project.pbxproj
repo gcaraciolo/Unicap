@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7218B7081B4354C000C53BCC /* GCPastSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */; };
 		72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBD31B42140000E49DCD /* GCStudentCredentials.m */; };
 		72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */; };
 		72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBE41B4227B600E49DCD /* GCRequestError.m */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Unicap.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D36A060BC58C6F958717B82 /* Pods-Unicap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unicap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unicap/Pods-Unicap.release.xcconfig"; sourceTree = "<group>"; };
+		7218B7061B4354C000C53BCC /* GCPastSubjectsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPastSubjectsService.h; sourceTree = "<group>"; };
+		7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPastSubjectsService.m; sourceTree = "<group>"; };
 		72BACBD21B42140000E49DCD /* GCStudentCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentCredentials.h; sourceTree = "<group>"; };
 		72BACBD31B42140000E49DCD /* GCStudentCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentCredentials.m; sourceTree = "<group>"; };
 		72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestUtils.h; sourceTree = "<group>"; };
@@ -119,6 +122,15 @@
 				5D36A060BC58C6F958717B82 /* Pods-Unicap.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		7218B7051B43548A00C53BCC /* Past Grades */ = {
+			isa = PBXGroup;
+			children = (
+				7218B7061B4354C000C53BCC /* GCPastSubjectsService.h */,
+				7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */,
+			);
+			name = "Past Grades";
 			sourceTree = "<group>";
 		};
 		72BACBD11B4213CE00E49DCD /* Model */ = {
@@ -265,6 +277,7 @@
 			children = (
 				72BACBD61B42153900E49DCD /* Utils */,
 				ACDC663F1B42E9D00055D494 /* Grades from current period */,
+				7218B7051B43548A00C53BCC /* Past Grades */,
 				ACBF317E1B41C55B00BB12BE /* Base */,
 				ACBF317D1B41C54E00BB12BE /* Login */,
 			);
@@ -482,6 +495,7 @@
 				ACDC66421B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m in Sources */,
 				AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */,
 				AC391B961B419929000728D5 /* GCLoginService.m in Sources */,
+				7218B7081B4354C000C53BCC /* GCPastSubjectsService.m in Sources */,
 				72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */,
 				72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */,
 				72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */,

@@ -170,7 +170,7 @@
     [_sideMenuViewController setContentViewInPortraitOffsetCenterX:([[UIScreen mainScreen] bounds].size.width)*0.2125];
     
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    if ([GCStudentCredentials sharedInstance].sessionID) {
+    if ([[GCStudentCredentials sharedInstance] isLoggedIn]) {
         [_window setRootViewController:_sideMenuViewController];
     } else {
         [_window setRootViewController:_loginViewController];

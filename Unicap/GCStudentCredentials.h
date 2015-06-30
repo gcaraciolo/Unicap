@@ -18,4 +18,8 @@
 
 +(instancetype)sharedInstance;
 
+
+- (void)saveStudentCredentials;
+- (BOOL)isLoggedIn;
+
 @end

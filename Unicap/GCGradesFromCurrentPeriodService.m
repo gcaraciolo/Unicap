@@ -66,6 +66,7 @@
 -(void)scrapGradesFromCurrentPeriod:(HTMLDocument *)document {
 
     NSArray *allElements = [document nodesMatchingSelector:@".tab_texto"];
+    
     int col = 0;
     NSMutableArray *subjectsElements = [NSMutableArray new];
     for (HTMLElement *element in allElements) {
@@ -113,10 +114,12 @@
         subject.finalAverage    = subjectAsArray[6];
     }
     if (subjectAsArray[7]) {
-        subject.situation       = subjectAsArray[7];
+        NSString *situation = subjectAsArray[7];
+        NSString *trimmedString = [situation stringByTrimmingCharactersInSet:
+                                   [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        subject.situation       = trimmedString;
     }
     
-    GCLoggerInfo(@"%@", subject);
 }
 
 
