@@ -1,0 +1,18 @@
+//
+//  Unicap-Prefix.pch
+//  Unicap
+//
+//  Created by Guilherme Caraciolo on 6/30/15.
+//  Copyright (c) 2015 Guilherme Caraciolo. All rights reserved.
+//
+
+#ifndef Unicap_Unicap_Prefix_pch
+#define Unicap_Unicap_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#import "GCLogger.h"
+
+#endif

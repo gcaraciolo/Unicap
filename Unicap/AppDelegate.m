@@ -99,7 +99,7 @@
         error = [NSError errorWithDomain:@"YOUR_ERROR_DOMAIN" code:9999 userInfo:dict];
         // Replace this with code to handle the error appropriately.
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        logError(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
     
@@ -131,7 +131,7 @@
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             // Replace this implementation with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+            logError(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
         }
     }
@@ -174,22 +174,22 @@
 
 - (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"menu will show");
+    logInfo(@"menu will show");
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"menu did show");
+    logInfo(@"menu did show");
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"menu will hide");
+    logInfo(@"menu will hide");
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
 {
-    NSLog(@"menu did hide");
+    logInfo(@"menu did hide");
 }
 
 @end

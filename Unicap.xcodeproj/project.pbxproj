@@ -24,6 +24,7 @@
 		AC391B961B419929000728D5 /* GCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B951B419929000728D5 /* GCLoginService.m */; };
 		AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B991B419BB3000728D5 /* GCLoginViewController.m */; };
 		ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF31801B41C57D00BB12BE /* GCBaseService.m */; };
+		ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC663B1B42D9550055D494 /* GCLogger.m */; };
 		ADB3F3A02D55A4FEB8BE76DE /* libPods-Unicap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,9 @@
 		AC391B991B419BB3000728D5 /* GCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLoginViewController.m; sourceTree = "<group>"; };
 		ACBF317F1B41C57D00BB12BE /* GCBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCBaseService.h; sourceTree = "<group>"; };
 		ACBF31801B41C57D00BB12BE /* GCBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCBaseService.m; sourceTree = "<group>"; };
+		ACDC663A1B42D9550055D494 /* GCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLogger.h; sourceTree = "<group>"; };
+		ACDC663B1B42D9550055D494 /* GCLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLogger.m; sourceTree = "<group>"; };
+		ACDC663D1B42D9EC0055D494 /* Unicap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unicap-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +128,7 @@
 		72BACBD61B42153900E49DCD /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				ACDC66381B42D93D0055D494 /* Logger */,
 				72BACBE21B42279D00E49DCD /* Error */,
 				72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */,
 				72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */,
@@ -225,6 +230,7 @@
 		AC391B6A1B41987F000728D5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				ACDC663D1B42D9EC0055D494 /* Unicap-Prefix.pch */,
 				AC391B6B1B41987F000728D5 /* Info.plist */,
 				AC391B6C1B41987F000728D5 /* main.m */,
 			);
@@ -293,6 +299,15 @@
 				ACBF31801B41C57D00BB12BE /* GCBaseService.m */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		ACDC66381B42D93D0055D494 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				ACDC663A1B42D9550055D494 /* GCLogger.h */,
+				ACDC663B1B42D9550055D494 /* GCLogger.m */,
+			);
+			name = Logger;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +446,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */,
+				ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */,
 				AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */,
 				72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */,
 				72BACBFA1B42AB7700E49DCD /* GCPanelViewController.m in Sources */,
@@ -571,6 +587,8 @@
 			baseConfigurationReference = 97E43F6227A4BA07C5C2C831 /* Pods-Unicap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Unicap/Unicap-Prefix.pch";
 				INFOPLIST_FILE = Unicap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -582,6 +600,8 @@
 			baseConfigurationReference = 5D36A060BC58C6F958717B82 /* Pods-Unicap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Unicap/Unicap-Prefix.pch";
 				INFOPLIST_FILE = Unicap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
