@@ -69,65 +69,68 @@
                        failure:(void (^)(NSError *error))failure {
     
     HTMLDocument *__block document;
-        [self createURLForLoginWithCompletition:^(NSString *fullURL) {
-                
-            NSMutableDictionary *params = [NSMutableDictionary new];
-            params[kROUTINE] = kROUTINE_LOGIN;
-            params[kREGISTRATION] = [GCStudentCredentials sharedInstance].matricula;
-            params[kDIGIT] = [GCStudentCredentials sharedInstance].digito;
-            params[kPASSWORD] = [GCStudentCredentials sharedInstance].senha;
+    [self createURLForLoginWithCompletition:^(NSString *fullURL) {
+        
+        NSMutableDictionary *params = [NSMutableDictionary new];
+        params[kROUTINE] = kROUTINE_LOGIN;
+        params[kREGISTRATION] = [GCStudentCredentials sharedInstance].matricula;
+        params[kDIGIT] = [GCStudentCredentials sharedInstance].digito;
+        params[kPASSWORD] = [GCStudentCredentials sharedInstance].senha;
+        
+        
+        [GCBaseService doGETRequestURL:fullURL params:params completition:^(id response) {
             
+            document = [HTMLDocument documentWithData:response
+                                    contentTypeHeader:kREQUEST_CONTENT_TYPE];
             
-            [GCBaseService doGETRequestURL:fullURL params:params completition:^(id response) {
-                
-                document = [HTMLDocument documentWithData:response
-                                        contentTypeHeader:kREQUEST_CONTENT_TYPE];
-                
-                
-                //TODO: check whether login credentials are valid
-                HTMLElement *loginError = [document firstNodeMatchingSelector:@".msg"];
-                if (loginError) {
-                    NSString * errorType = loginError.textContent;
-                    
-                    NSMutableDictionary *errorDetails = [NSMutableDictionary new];
-                    [errorDetails setValue:errorType forKey:@"errorType"];
-                    
-                    NSError *error = nil;
-                    
-                    if ([errorType containsString:@"limite"]) {
-                        error = [NSError errorWithDomain:@"unicap" code:1001 userInfo:errorDetails];
-                        failure(error);
-                        
-                    } else if ([errorType containsString:@"Senha"]) {
-                        error = [NSError errorWithDomain:@"unicap" code:1002 userInfo:errorDetails];
-                        failure(error);
-                        
-                    } else if ([errorType containsString:@"A Matr"]) {
-                        error = [NSError errorWithDomain:@"unicap" code:1003 userInfo:errorDetails];
-                        failure(error);
-                    } else if ([errorType containsString:@"manuten"]) {
-                        error = [NSError errorWithDomain:@"unicap" code:1004 userInfo:errorDetails];
-                        failure(error);
-                    } else {
-                        [errorDetails setValue:@"Unknow error" forKey:@"errorType"];
-                        error = [NSError errorWithDomain:@"unicap" code:1005 userInfo:errorDetails];
-                        failure(error);
-                    }
-                    
-                    return;
-                }
-                
-                
+            HTMLElement *loginError = [document firstNodeMatchingSelector:@".msg"];
+            NSError *error = [self checkLogin:loginError];
+            
+            if (error) {
+                failure(error);
+            } else {
                 //get token
                 NSDictionary *formNode = [[document firstNodeMatchingSelector:FORM] attributes];
                 NSString *permanentSessionID = formNode[ACTION];
                 [GCStudentCredentials sharedInstance].sessionID = permanentSessionID;
                 completition(YES);
-            } failure:^(NSError *error) {
-                failure(error);
-            }];
+            }
             
+            
+        } failure:^(NSError *error) {
+            failure(error);
         }];
+        
+    }];
+}
+
+//check whether login credentials are valid
+-(NSError *)checkLogin:(HTMLElement *)loginError {
+    if (loginError) {
+        NSString * errorType = loginError.textContent;
+        
+        NSMutableDictionary *errorDetails = [NSMutableDictionary new];
+        [errorDetails setValue:errorType forKey:@"errorType"];
+        
+        NSError *error = nil;
+        
+        if ([errorType containsString:@"limite"]) {
+            error = [NSError errorWithDomain:@"unicap" code:1001 userInfo:errorDetails];
+        } else if ([errorType containsString:@"Senha"]) {
+            error = [NSError errorWithDomain:@"unicap" code:1002 userInfo:errorDetails];
+        } else if ([errorType containsString:@"A Matr"]) {
+            error = [NSError errorWithDomain:@"unicap" code:1003 userInfo:errorDetails];
+        } else if ([errorType containsString:@"manuten"]) {
+            error = [NSError errorWithDomain:@"unicap" code:1004 userInfo:errorDetails];
+        } else {
+            [errorDetails setValue:@"Unknow error" forKey:@"errorType"];
+            error = [NSError errorWithDomain:@"unicap" code:1005 userInfo:errorDetails];
+        }
+        
+        return error;
+    }
+    
+    return nil;
 }
 
 @end
