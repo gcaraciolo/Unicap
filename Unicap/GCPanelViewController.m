@@ -7,7 +7,7 @@
 //
 
 #import "GCPanelViewController.h"
-#import "GCGradesFromCurrentPeriodService.h"
+#import "GCCurrentSubjectsServices.h"
 
 @implementation GCPanelViewController
 
@@ -15,11 +15,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    GCGradesFromCurrentPeriodService *currentGrandes = [GCGradesFromCurrentPeriodService new];
-    [currentGrandes getGradesFromCurrentPeriodWithCompletition:^(bool succeded) {
-        
+    GCCurrentSubjectsServices *currentSubjects = [GCCurrentSubjectsServices new];
+    [currentSubjects getSubjectsFromCurrentPeriodWithCompletition:^(NSMutableSet *subjects) {
+        GCLoggerInfo(@"%@", subjects);
     } failure:^(NSError *error) {
-        
+        GCLoggerError(@"%@", error);
     }];
     
 }

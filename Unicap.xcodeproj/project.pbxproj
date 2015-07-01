@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7218B7081B4354C000C53BCC /* GCPastSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */; };
+		7218B70C1B435E8200C53BCC /* GCCurrentSubjectsServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7218B70B1B435E8200C53BCC /* GCCurrentSubjectsServices.m */; };
 		72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBD31B42140000E49DCD /* GCStudentCredentials.m */; };
 		72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */; };
 		72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBE41B4227B600E49DCD /* GCRequestError.m */; };
@@ -27,7 +28,6 @@
 		AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B991B419BB3000728D5 /* GCLoginViewController.m */; };
 		ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF31801B41C57D00BB12BE /* GCBaseService.m */; };
 		ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC663B1B42D9550055D494 /* GCLogger.m */; };
-		ACDC66421B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC66411B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m */; };
 		ADB3F3A02D55A4FEB8BE76DE /* libPods-Unicap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +46,8 @@
 		5D36A060BC58C6F958717B82 /* Pods-Unicap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unicap.release.xcconfig"; path = "Pods/Target Support Files/Pods-Unicap/Pods-Unicap.release.xcconfig"; sourceTree = "<group>"; };
 		7218B7061B4354C000C53BCC /* GCPastSubjectsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPastSubjectsService.h; sourceTree = "<group>"; };
 		7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPastSubjectsService.m; sourceTree = "<group>"; };
+		7218B70A1B435E8200C53BCC /* GCCurrentSubjectsServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCCurrentSubjectsServices.h; sourceTree = "<group>"; };
+		7218B70B1B435E8200C53BCC /* GCCurrentSubjectsServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCurrentSubjectsServices.m; sourceTree = "<group>"; };
 		72BACBD21B42140000E49DCD /* GCStudentCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentCredentials.h; sourceTree = "<group>"; };
 		72BACBD31B42140000E49DCD /* GCStudentCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentCredentials.m; sourceTree = "<group>"; };
 		72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestUtils.h; sourceTree = "<group>"; };
@@ -84,8 +86,6 @@
 		ACDC663A1B42D9550055D494 /* GCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLogger.h; sourceTree = "<group>"; };
 		ACDC663B1B42D9550055D494 /* GCLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLogger.m; sourceTree = "<group>"; };
 		ACDC663D1B42D9EC0055D494 /* Unicap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Unicap-Prefix.pch"; sourceTree = "<group>"; };
-		ACDC66401B42EEA20055D494 /* GCGradesFromCurrentPeriodService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCGradesFromCurrentPeriodService.h; sourceTree = "<group>"; };
-		ACDC66411B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCGradesFromCurrentPeriodService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +131,15 @@
 				7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */,
 			);
 			name = "Past Grades";
+			sourceTree = "<group>";
+		};
+		7218B7091B435E7100C53BCC /* CurrentSubjects */ = {
+			isa = PBXGroup;
+			children = (
+				7218B70A1B435E8200C53BCC /* GCCurrentSubjectsServices.h */,
+				7218B70B1B435E8200C53BCC /* GCCurrentSubjectsServices.m */,
+			);
+			name = CurrentSubjects;
 			sourceTree = "<group>";
 		};
 		72BACBD11B4213CE00E49DCD /* Model */ = {
@@ -275,8 +284,8 @@
 		AC391B931B419903000728D5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				7218B7091B435E7100C53BCC /* CurrentSubjects */,
 				72BACBD61B42153900E49DCD /* Utils */,
-				ACDC663F1B42E9D00055D494 /* Grades from current period */,
 				7218B7051B43548A00C53BCC /* Past Grades */,
 				ACBF317E1B41C55B00BB12BE /* Base */,
 				ACBF317D1B41C54E00BB12BE /* Login */,
@@ -338,15 +347,6 @@
 				72BACBFD1B4332C700E49DCD /* GCUtils.m */,
 			);
 			name = Utils;
-			sourceTree = "<group>";
-		};
-		ACDC663F1B42E9D00055D494 /* Grades from current period */ = {
-			isa = PBXGroup;
-			children = (
-				ACDC66401B42EEA20055D494 /* GCGradesFromCurrentPeriodService.h */,
-				ACDC66411B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m */,
-			);
-			name = "Grades from current period";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,8 +492,8 @@
 				AC391B701B41987F000728D5 /* AppDelegate.m in Sources */,
 				ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */,
 				AC391B6D1B41987F000728D5 /* main.m in Sources */,
-				ACDC66421B42EEA20055D494 /* GCGradesFromCurrentPeriodService.m in Sources */,
 				AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */,
+				7218B70C1B435E8200C53BCC /* GCCurrentSubjectsServices.m in Sources */,
 				AC391B961B419929000728D5 /* GCLoginService.m in Sources */,
 				7218B7081B4354C000C53BCC /* GCPastSubjectsService.m in Sources */,
 				72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */,

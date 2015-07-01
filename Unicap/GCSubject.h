@@ -19,6 +19,8 @@
 @property (nonatomic)         BOOL      *attended;
 @property (strong, nonatomic) NSDate    *studiedIn;
 @property (strong, nonatomic) NSString  *classCode;
+@property (strong, nonatomic) NSString  *classLocation;
+@property (strong, nonatomic) NSArray   *schedule;
 @property (strong, nonatomic) NSNumber  *period;
 @property (strong, nonatomic) NSNumber  *firstGrade;
 @property (strong, nonatomic) NSNumber  *secondeGrade;
