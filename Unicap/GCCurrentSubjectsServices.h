@@ -10,7 +10,7 @@
 
 @interface GCCurrentSubjectsServices : NSObject
 
-- (void)getSubjectsFromCurrentPeriodWithCompletition:(void (^)(NSMutableSet *))completition
-                                             failure:(void (^)(NSError *))failure;
+- (void)getInformationsFromCurrentPeriodWithCompletition:(void (^)(NSMutableSet *))completition
+                                                 failure:(void (^)(NSError *))failure;
 
 @end

@@ -58,4 +58,13 @@
 -(BOOL)isLoggedIn {
     return _loggedIn;
 }
+
+-(void)resetApp {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults removeObjectForKey:@"matricula"];
+    [defaults removeObjectForKey:@"digito"];
+    [defaults removeObjectForKey:@"senha"];
+    [defaults removeObjectForKey:@"sessionID"];
+    [defaults synchronize];
+}
 @end

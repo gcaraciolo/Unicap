@@ -21,5 +21,5 @@
 
 - (void)saveStudentCredentials;
 - (BOOL)isLoggedIn;
-
+- (void)resetApp;
 @end

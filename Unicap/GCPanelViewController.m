@@ -8,6 +8,9 @@
 
 #import "GCPanelViewController.h"
 #import "GCCurrentSubjectsServices.h"
+#import "GCStudentService.h"
+#import "GCStudent.h"
+
 
 @implementation GCPanelViewController
 
@@ -16,10 +19,17 @@
     [super viewDidLoad];
     
     GCCurrentSubjectsServices *currentSubjects = [GCCurrentSubjectsServices new];
-    [currentSubjects getSubjectsFromCurrentPeriodWithCompletition:^(NSMutableSet *subjects) {
+    [currentSubjects getInformationsFromCurrentPeriodWithCompletition:^(NSMutableSet *subjects) {
         GCLoggerInfo(@"%@", subjects);
     } failure:^(NSError *error) {
         GCLoggerError(@"%@", error);
+    }];
+    
+    GCStudentService *studentService = [GCStudentService new];
+    [studentService getStudentInformationsWithCompletition:^(GCStudent *student) {
+        GCLoggerInfo(@"%@",student);
+    } failure:^(NSError *error) {
+        GCLoggerError(@"%@",error);
     }];
     
 }

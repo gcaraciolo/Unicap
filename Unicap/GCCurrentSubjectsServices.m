@@ -22,8 +22,8 @@
 
 #pragma mark - Request
 
-- (void)getSubjectsFromCurrentPeriodWithCompletition:(void (^)(NSMutableSet *))completition
-                                             failure:(void (^)(NSError *))failure {
+- (void)getInformationsFromCurrentPeriodWithCompletition:(void (^)(NSMutableSet *))completition
+                                                 failure:(void (^)(NSError *))failure {
     
     
     self.currentSubjects = [NSMutableSet new];
