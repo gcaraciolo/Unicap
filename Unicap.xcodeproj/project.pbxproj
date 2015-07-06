@@ -28,6 +28,7 @@
 		AC391B8A1B419880000728D5 /* UnicapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B891B419880000728D5 /* UnicapTests.m */; };
 		AC391B961B419929000728D5 /* GCLoginService.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B951B419929000728D5 /* GCLoginService.m */; };
 		AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B991B419BB3000728D5 /* GCLoginViewController.m */; };
+		AC99E1D71B4B0D1D0099FD34 /* GCPastSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = AC99E1D61B4B0D1D0099FD34 /* GCPastSubject.m */; };
 		ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = ACBF31801B41C57D00BB12BE /* GCBaseService.m */; };
 		ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDC663B1B42D9550055D494 /* GCLogger.m */; };
 		ADB3F3A02D55A4FEB8BE76DE /* libPods-Unicap.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1AC0ACF696763B2BFCEAAC /* libPods-Unicap.a */; };
@@ -87,6 +88,8 @@
 		AC391B951B419929000728D5 /* GCLoginService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLoginService.m; sourceTree = "<group>"; };
 		AC391B981B419BB3000728D5 /* GCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLoginViewController.h; sourceTree = "<group>"; };
 		AC391B991B419BB3000728D5 /* GCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCLoginViewController.m; sourceTree = "<group>"; };
+		AC99E1D51B4B0D1D0099FD34 /* GCPastSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPastSubject.h; sourceTree = "<group>"; };
+		AC99E1D61B4B0D1D0099FD34 /* GCPastSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPastSubject.m; sourceTree = "<group>"; };
 		ACBF317F1B41C57D00BB12BE /* GCBaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCBaseService.h; sourceTree = "<group>"; };
 		ACBF31801B41C57D00BB12BE /* GCBaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCBaseService.m; sourceTree = "<group>"; };
 		ACDC663A1B42D9550055D494 /* GCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCLogger.h; sourceTree = "<group>"; };
@@ -178,6 +181,7 @@
 		72BACBD11B4213CE00E49DCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AC99E1D41B4B0D0B0099FD34 /* PastSubject */,
 				728E6E5F1B4615440089F839 /* Schedule */,
 				72BACBE61B42A16100E49DCD /* Auth */,
 				72BACBE71B42A16C00E49DCD /* Student */,
@@ -345,6 +349,15 @@
 				AC391B991B419BB3000728D5 /* GCLoginViewController.m */,
 			);
 			name = Login;
+			sourceTree = "<group>";
+		};
+		AC99E1D41B4B0D0B0099FD34 /* PastSubject */ = {
+			isa = PBXGroup;
+			children = (
+				AC99E1D51B4B0D1D0099FD34 /* GCPastSubject.h */,
+				AC99E1D61B4B0D1D0099FD34 /* GCPastSubject.m */,
+			);
+			name = PastSubject;
 			sourceTree = "<group>";
 		};
 		ACBF317D1B41C54E00BB12BE /* Login */ = {
@@ -522,6 +535,7 @@
 				ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */,
 				AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */,
 				72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */,
+				AC99E1D71B4B0D1D0099FD34 /* GCPastSubject.m in Sources */,
 				72BACBFA1B42AB7700E49DCD /* GCPanelViewController.m in Sources */,
 				AC391B701B41987F000728D5 /* AppDelegate.m in Sources */,
 				ACBF31811B41C57D00BB12BE /* GCBaseService.m in Sources */,

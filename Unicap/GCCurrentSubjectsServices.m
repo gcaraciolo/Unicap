@@ -29,7 +29,7 @@
     self.currentSubjects = [NSMutableSet new];
     
     NSMutableDictionary *params = [NSMutableDictionary new];
-    params[kROUTINE] = kROUTINE_CURRENT_SUBJECTS;
+    params[kROUTINE] = kROUTINE_SUBJECTS_CURRENT;
     
     NSMutableString *urlAuth = [NSMutableString new];
     [urlAuth appendString:kREQUEST_BASE_URL];
@@ -39,22 +39,24 @@
         
         HTMLDocument *document = [HTMLDocument documentWithData:response
                                               contentTypeHeader:kREQUEST_CONTENT_TYPE];
+
         [self scrapSubjectsFromCurrentPeriod:document];
-        
-        [self getGradesFromCurrentPeriodWithCompletition:^(BOOL succeded) {
+        [self getGradesFromCurrentPeriodWithCompletition:^() {
+            
             completition([self.currentSubjects copy]);
-        
         } failure:^(NSError *error) {
+            
             GCLoggerError(@"%@", error);
         }];
     
     } failure:^(NSError *error) {
+        
         GCLoggerError(@"%@", error);
     }];
     
 }
 
-- (void)getGradesFromCurrentPeriodWithCompletition:(void (^)(BOOL))completition
+- (void)getGradesFromCurrentPeriodWithCompletition:(void (^)())completition
                                            failure:(void (^)(NSError *))failure {
     
     NSMutableDictionary *params = [NSMutableDictionary new];
@@ -71,7 +73,7 @@
         
         [self scrapCoefficient:document];
         [self scrapGradesFromCurrentPeriod:document];
-        completition(YES);
+        completition();
         
     } failure:^(NSError *error) {
         GCLoggerError(@"%@", error);
@@ -222,8 +224,9 @@
         subject.finalAverage    = subjectAsArray[6];
     }
     if (subjectAsArray[7]) {
-        subject.situation       = subjectAsArray[7];
+        subject.currentSituation = subjectAsArray[7];
     }
+    
 }
 
 

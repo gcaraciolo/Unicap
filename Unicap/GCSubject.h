@@ -27,8 +27,7 @@
 @property (strong, nonatomic) NSNumber  *average;
 @property (strong, nonatomic) NSNumber  *finalGrade;
 @property (strong, nonatomic) NSNumber  *finalAverage;
-@property (strong, nonatomic) NSString  *situation;
-
-
+@property (strong, nonatomic) NSString  *currentSituation;
+@property (strong, nonatomic) NSString  *pastSituation;
 
 @end

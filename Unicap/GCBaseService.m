@@ -16,8 +16,10 @@
             completition:(void (^)(id))completition
                  failure:(void (^)(NSError *))failure {
     
-    GCLoggerInfo(@"params %@",params);
     GCLoggerInfo(@"url %@",url);
+    GCLoggerInfo(@"params %@",params);
+    GCLoggerInfo(@"doing request...");
+
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     
@@ -25,9 +27,11 @@
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];    
     
     [manager GET:url parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        GCLoggerInfo(@"response arrived with success");
         id response = responseObject;
         completition(response);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        GCLoggerError(@"response arrived with error");
         failure(error);
     }];
 }

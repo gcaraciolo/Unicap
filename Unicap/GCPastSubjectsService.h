@@ -10,4 +10,7 @@
 
 @interface GCPastSubjectsService : NSObject
 
+- (void)getPastSubjectsWithCompletition:(void (^)(NSMutableSet *))completition
+                                failure:(void (^)(NSError *))failure;
+
 @end

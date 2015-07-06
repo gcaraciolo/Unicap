@@ -12,6 +12,8 @@
 #import "GCStudent.h"
 
 
+#import "GCPastSubjectsService.h"
+
 @implementation GCPanelViewController
 
 
@@ -20,18 +22,33 @@
     
     GCCurrentSubjectsServices *currentSubjects = [GCCurrentSubjectsServices new];
     [currentSubjects getInformationsFromCurrentPeriodWithCompletition:^(NSMutableSet *subjects) {
-        GCLoggerInfo(@"%@", subjects);
+        
+        GCLoggerInfo(@"%@\n%d", subjects, [subjects count]);
     } failure:^(NSError *error) {
+        
         GCLoggerError(@"%@", error);
     }];
     
     GCStudentService *studentService = [GCStudentService new];
     [studentService getStudentInformationsWithCompletition:^(GCStudent *student) {
+        
         GCLoggerInfo(@"%@",student);
     } failure:^(NSError *error) {
+        
         GCLoggerError(@"%@",error);
     }];
     
+    
+    //TODO: colocar esse codigo em suas respectivas view controllers
+    GCPastSubjectsService *pastSubjects = [GCPastSubjectsService new];
+    [pastSubjects getPastSubjectsWithCompletition:^(NSMutableSet *subjects) {
+        
+        GCLoggerInfo(@"%@\n%d", subjects, [subjects count]);
+    } failure:^(NSError *error) {
+        
+        GCLoggerError(@"%@",error);
+    }];
+        
 }
 
 - (void)didReceiveMemoryWarning {

@@ -25,7 +25,7 @@ extern NSString *const kPASSWORD;
 
 extern NSString *const kROUTINE_LOGIN;
 extern NSString *const kROUTINE_PERSONAL;
-extern NSString *const kROUTINE_CURRENT_SUBJECTS;
+extern NSString *const kROUTINE_SUBJECTS_CURRENT;
 extern NSString *const kROUTINE_SUBJECTS_PAST;
 extern NSString *const kROUTINE_SUBJECTS_PENDING;
 extern NSString *const kROUTINE_SUBJECTS_TESTS;
