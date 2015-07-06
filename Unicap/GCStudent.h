@@ -37,7 +37,8 @@
 @property (strong, nonatomic) NSString  *password;
 @property (strong, nonatomic) NSNumber  *courseCoefficient;
 @property (strong, nonatomic) NSNumber  *lastCoefficient;
-@property (strong, nonatomic) NSSet     *subjects;
+@property (strong, nonatomic) NSArray   *currentSubjects;
+@property (strong, nonatomic) NSArray   *pastSubjects;
 
 
 +(instancetype)sharedInstance;

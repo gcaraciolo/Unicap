@@ -10,6 +10,8 @@
 #import "GCBaseService.h"
 #import <HTMLReader.h>
 #import "GCPastSubject.h"
+#import "GCUtils.h"
+#import "GCStudent.h"
 
 @interface GCPastSubjectsService()
 
@@ -53,81 +55,37 @@
 
 -(void)scrapPastSubjects:(HTMLDocument *)document {
      
-    HTMLElement *table = [self findElementFromDocument:document
-                                               WithTag:@"table"
-                                               atIndex:6];
+    HTMLElement *tableElements = [GCUtils findElementFromDocument:document
+                                                  WithTag:@"table"
+                                                  atIndex:6];
     
-    NSArray *allElements = [table nodesMatchingSelector:@".tab_texto"];
+    NSArray *allElements = [tableElements nodesMatchingSelector:@".tab_texto"];
     
-    [self readTable:allElements];
+    NSArray *tableContents = [GCUtils createTableFromArray:allElements
+                                       withRowSize:5];
     
+    [self fillStudentPastSubjects:tableContents];
 }
 
--(void)readTable:(NSArray *)tableElements {
+- (void) fillStudentPastSubjects:(NSArray *)tableContents {
     
-    NSArray *table = [self createTableFromArray:tableElements
-                                    withRowSize:5];
+    NSMutableArray *pastSubjects = [NSMutableArray new];
     
-    NSLog(@"%@", table);
-    
-    for (NSArray *sub in table) {       
-        for (HTMLElement *e in sub) {
-            NSLog(@"%@", e.textContent);
-        }
-    }
-    
-}
-
--(NSArray *)createTableFromArray:(NSArray *)array withRowSize:(int)rowSize {
-    
-    NSMutableArray *table = [NSMutableArray new];
-    NSMutableArray *row = [NSMutableArray new];
-    
-    int count = 0, i = 0;
-    for (id obj in array) {
-        if (count == rowSize) {
-            [table addObject:row];
-            count = 0;
-            row = [NSMutableArray new];
-        }
-        [row addObject:obj];
-        count++;
-        i++;
-    }
-    
-    return [table copy];
-}
-
--(NSString *)trimmedString:(NSString *)string {
-    NSString *trimmedString = [string stringByTrimmingCharactersInSet:
-                               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    return trimmedString;
-
-}
-
-
-#pragma mark - Helper
-
--(HTMLElement *)findElementFromDocument:(HTMLDocument *)document
-                                WithTag:(NSString *)tag
-                                atIndex:(int)index {
-    
-    HTMLSelector *selector = [HTMLSelector selectorForString:tag];
-    
-   int count = 0;
-    for (HTMLElement *node in document.treeEnumerator) {
+    for (NSArray *row in tableContents) {
         
-        if ([node isKindOfClass:[HTMLElement class]] &&
-            [selector matchesElement:node]) {
-            
-            if (count == index) {
-                return node;
-            }
-            count++;
-        }
-
+        GCPastSubject *pastSubject = [GCPastSubject new];
+        pastSubject.period     = [GCUtils contentValueFromHTMLElement:row[0]];
+        pastSubject.code       = [GCUtils contentValueFromHTMLElement:row[1]];
+        pastSubject.name       = [GCUtils contentValueFromHTMLElement:row[2]];
+        pastSubject.average    = [GCUtils contentValueFromHTMLElement:row[3]];
+        pastSubject.situation  = [GCUtils contentValueFromHTMLElement:row[4]];
+        
+        [pastSubjects addObject:pastSubject];
     }
-    return nil;
+    
+    [[GCStudent sharedInstance] setPastSubjects:pastSubjects];
+    
+    
 }
 
 

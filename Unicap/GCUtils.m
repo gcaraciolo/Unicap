@@ -8,6 +8,7 @@
 
 #import "GCUtils.h"
 
+
 @implementation GCUtils
 
 + (BOOL)validateString:(NSString *)string withPattern:(NSString *)pattern
@@ -30,6 +31,58 @@
     
     return didValidate;
 }
+
++ (NSArray *)createTableFromArray:(NSArray *)array withRowSize:(int)rowSize {
+    
+    NSMutableArray *table = [NSMutableArray new];
+    NSMutableArray *row = [NSMutableArray new];
+    
+    int count = 0;
+    for (id obj in array) {
+        if (count == rowSize) {
+            [table addObject:row];
+            count = 0;
+            row = [NSMutableArray new];
+        }
+        [row addObject:obj];
+        count++;
+    }
+    
+    [table addObject:row];
+    return [table copy];
+}
+
++ (NSString *)contentValueFromHTMLElement:(HTMLElement *)element {
+    NSString *string = element.textContent;
+    NSString *trimmedString = [string stringByTrimmingCharactersInSet:
+                               [NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return trimmedString;
+    
+}
+
+
++ (HTMLElement *)findElementFromDocument:(HTMLDocument *)document
+                                WithTag:(NSString *)tag
+                                atIndex:(int)index {
+    
+    HTMLSelector *selector = [HTMLSelector selectorForString:tag];
+    
+    int count = 0;
+    for (HTMLElement *node in document.treeEnumerator) {
+        
+        if ([node isKindOfClass:[HTMLElement class]] &&
+            [selector matchesElement:node]) {
+            
+            if (count == index) {
+                return node;
+            }
+            count++;
+        }
+        
+    }
+    return nil;
+}
+
 
 
 @end

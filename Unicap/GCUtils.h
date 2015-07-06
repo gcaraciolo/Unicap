@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <HTMLReader.h>
 
 @interface GCUtils : NSObject
 
 + (BOOL)validateString:(NSString *)string withPattern:(NSString *)pattern;
+
++ (NSArray *)createTableFromArray:(NSArray *)array withRowSize:(int)rowSize;
+
++ (NSString *)contentValueFromHTMLElement:(HTMLElement *)element;
+
++ (HTMLElement *)findElementFromDocument:(HTMLDocument *)document
+                                WithTag:(NSString *)tag
+                                atIndex:(int)index;
 
 @end
