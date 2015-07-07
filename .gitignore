@@ -1,5 +1,6 @@
 #provisorio
-Unicap/GCLoginViewController.*
+Unicap/ViewControllers/Login/GCLoginViewController.m
+
 # Xcode
 #
 build/
