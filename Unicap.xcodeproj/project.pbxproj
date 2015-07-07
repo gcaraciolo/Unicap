@@ -13,10 +13,10 @@
 		726237551B4BFF26009D880E /* GCFutureSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 726237541B4BFF26009D880E /* GCFutureSubject.m */; };
 		726237601B4C11B9009D880E /* GCTestingSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7262375F1B4C11B9009D880E /* GCTestingSchedule.m */; };
 		726237631B4C1259009D880E /* GCTestingScheduleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 726237621B4C1259009D880E /* GCTestingScheduleService.m */; };
+		726237671B4C1B6B009D880E /* GCConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 726237661B4C1B6B009D880E /* GCConstants.m */; };
 		728E6E621B4615560089F839 /* GCScheduleUnicap.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E6E611B4615560089F839 /* GCScheduleUnicap.m */; };
 		728E6E661B4618F70089F839 /* GCStudentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E6E651B4618F70089F839 /* GCStudentService.m */; };
 		72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBD31B42140000E49DCD /* GCStudentCredentials.m */; };
-		72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */; };
 		72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBE41B4227B600E49DCD /* GCRequestError.m */; };
 		72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEA1B42A18D00E49DCD /* GCStudent.m */; };
 		72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEE1B42A28700E49DCD /* GCSubject.m */; };
@@ -63,14 +63,14 @@
 		7262375F1B4C11B9009D880E /* GCTestingSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTestingSchedule.m; sourceTree = "<group>"; };
 		726237611B4C1259009D880E /* GCTestingScheduleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTestingScheduleService.h; sourceTree = "<group>"; };
 		726237621B4C1259009D880E /* GCTestingScheduleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTestingScheduleService.m; sourceTree = "<group>"; };
+		726237651B4C1B6B009D880E /* GCConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCConstants.h; sourceTree = "<group>"; };
+		726237661B4C1B6B009D880E /* GCConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCConstants.m; sourceTree = "<group>"; };
 		728E6E601B4615560089F839 /* GCScheduleUnicap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCScheduleUnicap.h; sourceTree = "<group>"; };
 		728E6E611B4615560089F839 /* GCScheduleUnicap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCScheduleUnicap.m; sourceTree = "<group>"; };
 		728E6E641B4618F70089F839 /* GCStudentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentService.h; sourceTree = "<group>"; };
 		728E6E651B4618F70089F839 /* GCStudentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentService.m; sourceTree = "<group>"; };
 		72BACBD21B42140000E49DCD /* GCStudentCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentCredentials.h; sourceTree = "<group>"; };
 		72BACBD31B42140000E49DCD /* GCStudentCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentCredentials.m; sourceTree = "<group>"; };
-		72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestUtils.h; sourceTree = "<group>"; };
-		72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequestUtils.m; sourceTree = "<group>"; };
 		72BACBE31B4227B600E49DCD /* GCRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestError.h; sourceTree = "<group>"; };
 		72BACBE41B4227B600E49DCD /* GCRequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequestError.m; sourceTree = "<group>"; };
 		72BACBE91B42A18D00E49DCD /* GCStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudent.h; sourceTree = "<group>"; };
@@ -199,9 +199,19 @@
 			name = TestingSchedule;
 			sourceTree = "<group>";
 		};
+		726237641B4C1B59009D880E /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				726237651B4C1B6B009D880E /* GCConstants.h */,
+				726237661B4C1B6B009D880E /* GCConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		728E6E5E1B4613040089F839 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				726237641B4C1B59009D880E /* Constants */,
 				ACDC663E1B42E7710055D494 /* Utils */,
 				ACDC66381B42D93D0055D494 /* Logger */,
 			);
@@ -244,8 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				72BACBE21B42279D00E49DCD /* Error */,
-				72BACBDA1B4217AF00E49DCD /* GCRequestUtils.h */,
-				72BACBDB1B4217AF00E49DCD /* GCRequestUtils.m */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -597,10 +605,10 @@
 				726237631B4C1259009D880E /* GCTestingScheduleService.m in Sources */,
 				7218B70C1B435E8200C53BCC /* GCCurrentSubjectsServices.m in Sources */,
 				AC391B961B419929000728D5 /* GCLoginService.m in Sources */,
+				726237671B4C1B6B009D880E /* GCConstants.m in Sources */,
 				7218B7081B4354C000C53BCC /* GCPastSubjectsService.m in Sources */,
 				72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */,
 				726237551B4BFF26009D880E /* GCFutureSubject.m in Sources */,
-				72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */,
 				728E6E621B4615560089F839 /* GCScheduleUnicap.m in Sources */,
 				726237601B4C11B9009D880E /* GCTestingSchedule.m in Sources */,
 				72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */,

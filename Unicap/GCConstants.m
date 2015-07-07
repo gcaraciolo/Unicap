@@ -1,14 +1,14 @@
 //
-//  GCRequestUtils.m
+//  GCConstants.m
 //  Unicap
 //
-//  Created by Guilherme Caraciolo on 6/29/15.
+//  Created by Guilherme Caraciolo on 7/7/15.
 //  Copyright (c) 2015 Guilherme Caraciolo. All rights reserved.
 //
 
-#import "GCRequestUtils.h"
+#import "GCConstants.h"
 
-@implementation GCRequestUtils
+@implementation GCConstants
 
 #pragma mark - URL
 
@@ -35,7 +35,6 @@ NSString *const kROUTINE_SUBJECTS_TESTING_SCHEDULE      = @"3";
 #pragma mark - Request
 
 NSString *const kREQUEST_CONTENT_TYPE                   = @"text/html";
-
 
 
 @end
