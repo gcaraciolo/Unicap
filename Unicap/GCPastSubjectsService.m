@@ -15,7 +15,7 @@
 
 @interface GCPastSubjectsService()
 
-@property (strong, nonatomic) NSMutableSet *pastSubjects;
+@property (strong, nonatomic) NSMutableArray *pastSubjects;
 
 @end
 
@@ -23,10 +23,10 @@
 
 #pragma mark - Request
 
-- (void)getPastSubjectsWithCompletition:(void (^)(NSMutableSet *))completition
+- (void)getPastSubjectsWithCompletition:(void (^)(NSArray *))completition
                                 failure:(void (^)(NSError *))failure {
     
-    self.pastSubjects = [NSMutableSet new];
+    self.pastSubjects = [NSMutableArray new];
     
     
     NSMutableDictionary *params = [NSMutableDictionary new];
@@ -83,6 +83,7 @@
         [pastSubjects addObject:pastSubject];
     }
     
+    self.pastSubjects = pastSubjects;
     [[GCStudent sharedInstance] setPastSubjects:pastSubjects];
     
     

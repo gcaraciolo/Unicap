@@ -29,7 +29,7 @@ extern NSString *const kROUTINE_SUBJECTS_CURRENT;
 extern NSString *const kROUTINE_SUBJECTS_PAST;
 extern NSString *const kROUTINE_SUBJECTS_PENDING;
 extern NSString *const kROUTINE_SUBJECTS_TESTS;
-extern NSString *const kROUTINE_SUBJECTS_CALENDAR;
+extern NSString *const kROUTINE_SUBJECTS_TESTING_SCHEDULE;
 
 #pragma mark - Request
 

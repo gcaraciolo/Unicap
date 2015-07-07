@@ -76,6 +76,7 @@
             if (count == index) {
                 return node;
             }
+            NSLog(@"%@, %d", node, count);
             count++;
         }
         

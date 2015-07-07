@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7218B7081B4354C000C53BCC /* GCPastSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */; };
 		7218B70C1B435E8200C53BCC /* GCCurrentSubjectsServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 7218B70B1B435E8200C53BCC /* GCCurrentSubjectsServices.m */; };
+		726237511B4BFEFA009D880E /* GCFutureSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 726237501B4BFEFA009D880E /* GCFutureSubjectsService.m */; };
+		726237551B4BFF26009D880E /* GCFutureSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 726237541B4BFF26009D880E /* GCFutureSubject.m */; };
+		726237601B4C11B9009D880E /* GCTestingSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 7262375F1B4C11B9009D880E /* GCTestingSchedule.m */; };
+		726237631B4C1259009D880E /* GCTestingScheduleService.m in Sources */ = {isa = PBXBuildFile; fileRef = 726237621B4C1259009D880E /* GCTestingScheduleService.m */; };
 		728E6E621B4615560089F839 /* GCScheduleUnicap.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E6E611B4615560089F839 /* GCScheduleUnicap.m */; };
 		728E6E661B4618F70089F839 /* GCStudentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E6E651B4618F70089F839 /* GCStudentService.m */; };
 		72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBD31B42140000E49DCD /* GCStudentCredentials.m */; };
@@ -51,6 +55,14 @@
 		7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPastSubjectsService.m; sourceTree = "<group>"; };
 		7218B70A1B435E8200C53BCC /* GCCurrentSubjectsServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCCurrentSubjectsServices.h; sourceTree = "<group>"; };
 		7218B70B1B435E8200C53BCC /* GCCurrentSubjectsServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCurrentSubjectsServices.m; sourceTree = "<group>"; };
+		7262374F1B4BFEFA009D880E /* GCFutureSubjectsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCFutureSubjectsService.h; sourceTree = "<group>"; };
+		726237501B4BFEFA009D880E /* GCFutureSubjectsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCFutureSubjectsService.m; sourceTree = "<group>"; };
+		726237531B4BFF26009D880E /* GCFutureSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCFutureSubject.h; sourceTree = "<group>"; };
+		726237541B4BFF26009D880E /* GCFutureSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCFutureSubject.m; sourceTree = "<group>"; };
+		7262375E1B4C11B9009D880E /* GCTestingSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTestingSchedule.h; sourceTree = "<group>"; };
+		7262375F1B4C11B9009D880E /* GCTestingSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTestingSchedule.m; sourceTree = "<group>"; };
+		726237611B4C1259009D880E /* GCTestingScheduleService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCTestingScheduleService.h; sourceTree = "<group>"; };
+		726237621B4C1259009D880E /* GCTestingScheduleService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTestingScheduleService.m; sourceTree = "<group>"; };
 		728E6E601B4615560089F839 /* GCScheduleUnicap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCScheduleUnicap.h; sourceTree = "<group>"; };
 		728E6E611B4615560089F839 /* GCScheduleUnicap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCScheduleUnicap.m; sourceTree = "<group>"; };
 		728E6E641B4618F70089F839 /* GCStudentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentService.h; sourceTree = "<group>"; };
@@ -133,13 +145,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		7218B7051B43548A00C53BCC /* Past Grades */ = {
+		7218B7051B43548A00C53BCC /* Past Subjects */ = {
 			isa = PBXGroup;
 			children = (
 				7218B7061B4354C000C53BCC /* GCPastSubjectsService.h */,
 				7218B7071B4354C000C53BCC /* GCPastSubjectsService.m */,
 			);
-			name = "Past Grades";
+			name = "Past Subjects";
 			sourceTree = "<group>";
 		};
 		7218B7091B435E7100C53BCC /* CurrentSubjects */ = {
@@ -149,6 +161,42 @@
 				7218B70B1B435E8200C53BCC /* GCCurrentSubjectsServices.m */,
 			);
 			name = CurrentSubjects;
+			sourceTree = "<group>";
+		};
+		7262374E1B4BFEE7009D880E /* FutureSubjects */ = {
+			isa = PBXGroup;
+			children = (
+				7262374F1B4BFEFA009D880E /* GCFutureSubjectsService.h */,
+				726237501B4BFEFA009D880E /* GCFutureSubjectsService.m */,
+			);
+			name = FutureSubjects;
+			sourceTree = "<group>";
+		};
+		726237521B4BFF13009D880E /* FutureSubject */ = {
+			isa = PBXGroup;
+			children = (
+				726237531B4BFF26009D880E /* GCFutureSubject.h */,
+				726237541B4BFF26009D880E /* GCFutureSubject.m */,
+			);
+			name = FutureSubject;
+			sourceTree = "<group>";
+		};
+		726237561B4C1082009D880E /* TestingSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				726237611B4C1259009D880E /* GCTestingScheduleService.h */,
+				726237621B4C1259009D880E /* GCTestingScheduleService.m */,
+			);
+			name = TestingSchedule;
+			sourceTree = "<group>";
+		};
+		7262375A1B4C1157009D880E /* TestingSchedule */ = {
+			isa = PBXGroup;
+			children = (
+				7262375E1B4C11B9009D880E /* GCTestingSchedule.h */,
+				7262375F1B4C11B9009D880E /* GCTestingSchedule.m */,
+			);
+			name = TestingSchedule;
 			sourceTree = "<group>";
 		};
 		728E6E5E1B4613040089F839 /* Common */ = {
@@ -181,6 +229,8 @@
 		72BACBD11B4213CE00E49DCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7262375A1B4C1157009D880E /* TestingSchedule */,
+				726237521B4BFF13009D880E /* FutureSubject */,
 				AC99E1D41B4B0D0B0099FD34 /* PastSubject */,
 				728E6E5F1B4615440089F839 /* Schedule */,
 				72BACBE61B42A16100E49DCD /* Auth */,
@@ -322,11 +372,13 @@
 		AC391B931B419903000728D5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				728E6E631B4618E40089F839 /* Student */,
+				ACBF317E1B41C55B00BB12BE /* Base */,
+				726237561B4C1082009D880E /* TestingSchedule */,
 				7218B7091B435E7100C53BCC /* CurrentSubjects */,
 				72BACBD61B42153900E49DCD /* Utils */,
-				7218B7051B43548A00C53BCC /* Past Grades */,
-				ACBF317E1B41C55B00BB12BE /* Base */,
+				728E6E631B4618E40089F839 /* Student */,
+				7262374E1B4BFEE7009D880E /* FutureSubjects */,
+				7218B7051B43548A00C53BCC /* Past Subjects */,
 				ACBF317D1B41C54E00BB12BE /* Login */,
 			);
 			name = Service;
@@ -542,14 +594,18 @@
 				AC391B6D1B41987F000728D5 /* main.m in Sources */,
 				AC391B9A1B419BB3000728D5 /* GCLoginViewController.m in Sources */,
 				728E6E661B4618F70089F839 /* GCStudentService.m in Sources */,
+				726237631B4C1259009D880E /* GCTestingScheduleService.m in Sources */,
 				7218B70C1B435E8200C53BCC /* GCCurrentSubjectsServices.m in Sources */,
 				AC391B961B419929000728D5 /* GCLoginService.m in Sources */,
 				7218B7081B4354C000C53BCC /* GCPastSubjectsService.m in Sources */,
 				72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */,
+				726237551B4BFF26009D880E /* GCFutureSubject.m in Sources */,
 				72BACBDC1B4217AF00E49DCD /* GCRequestUtils.m in Sources */,
 				728E6E621B4615560089F839 /* GCScheduleUnicap.m in Sources */,
+				726237601B4C11B9009D880E /* GCTestingSchedule.m in Sources */,
 				72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */,
 				72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */,
+				726237511B4BFEFA009D880E /* GCFutureSubjectsService.m in Sources */,
 				72BACBFE1B4332C700E49DCD /* GCUtils.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

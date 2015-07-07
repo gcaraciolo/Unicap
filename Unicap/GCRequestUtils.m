@@ -29,7 +29,7 @@ NSString *const kROUTINE_SUBJECTS_CURRENT               = @"14";
 NSString *const kROUTINE_SUBJECTS_PAST                  = @"5";
 NSString *const kROUTINE_SUBJECTS_PENDING               = @"6";
 NSString *const kROUTINE_SUBJECTS_TESTS                 = @"4";
-NSString *const kROUTINE_SUBJECTS_CALENDAR              = @"3";
+NSString *const kROUTINE_SUBJECTS_TESTING_SCHEDULE      = @"3";
 
 
 #pragma mark - Request

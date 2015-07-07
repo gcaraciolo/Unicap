@@ -39,6 +39,7 @@
 @property (strong, nonatomic) NSNumber  *lastCoefficient;
 @property (strong, nonatomic) NSArray   *currentSubjects;
 @property (strong, nonatomic) NSArray   *pastSubjects;
+@property (strong, nonatomic) NSArray   *futureSubjects;
 
 
 +(instancetype)sharedInstance;
