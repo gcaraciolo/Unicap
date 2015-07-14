@@ -10,7 +10,7 @@
 #import "GCLoginService.h"
 #import "GCStudentCredentials.h"
 #import "AppDelegate.h"
-
+#import "GCStudentService.h"
 
 @interface GCLoginViewController ()
 
@@ -31,6 +31,16 @@
     [login doLoginWithCompletition:^(bool succeded) {
         
         [[GCStudentCredentials sharedInstance] saveStudentCredentials];
+        
+        GCStudentService *studentService = [GCStudentService new];
+        [studentService getStudentInformationsWithCompletition:^(GCStudent *student) {
+            
+            GCLoggerInfo(@"%@",student);
+        } failure:^(NSError *error) {
+            
+            GCLoggerError(@"%@",error);
+        }];
+        
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         [appDelegate.window setRootViewController:appDelegate.sideMenuViewController];
     } failure:^(NSError *error) {

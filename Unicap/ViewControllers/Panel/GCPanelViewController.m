@@ -22,24 +22,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    GCCurrentSubjectsServices *currentSubjects = [GCCurrentSubjectsServices new];
-//    [currentSubjects getInformationsFromCurrentPeriodWithCompletition:^(NSMutableSet *subjects) {
-//        
-//        GCLoggerInfo(@"%@\n%d", subjects, [subjects count]);
-//    } failure:^(NSError *error) {
-//        
-//        GCLoggerError(@"%@", error);
-//    }];
-//    
-//    GCStudentService *studentService = [GCStudentService new];
-//    [studentService getStudentInformationsWithCompletition:^(GCStudent *student) {
-//        
-//        GCLoggerInfo(@"%@",student);
-//    } failure:^(NSError *error) {
-//        
-//        GCLoggerError(@"%@",error);
-//    }];
-//    
+    GCCurrentSubjectsServices *currentSubjects = [GCCurrentSubjectsServices new];
+    [currentSubjects getInformationsFromCurrentPeriodWithCompletition:^(NSMutableSet *subjects) {
+        
+        GCLoggerInfo(@"%@\n%d", subjects, [subjects count]);
+    } failure:^(NSError *error) {
+        
+        GCLoggerError(@"%@", error);
+    }];
     
 }
 
