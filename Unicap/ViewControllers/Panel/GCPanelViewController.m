@@ -40,36 +40,6 @@
 //        GCLoggerError(@"%@",error);
 //    }];
 //    
-//    
-//    //TODO: colocar esse codigo em suas respectivas view controllers
-//    GCPastSubjectsService *pastSubjects = [GCPastSubjectsService new];
-//    [pastSubjects getPastSubjectsWithCompletition:^(NSMutableArray *subjects) {
-//        
-//        GCLoggerInfo(@"%@\n%d", subjects, [subjects count]);
-//    } failure:^(NSError *error) {
-//        
-//        GCLoggerError(@"%@",error);
-//    }];
-//
-//    GCFutureSubjectsService *futureSubjects = [GCFutureSubjectsService new];
-//    [futureSubjects getFutureSubjectsWithCompletition:^(NSArray *subjects) {
-//        
-//        GCLoggerInfo(@"%@", subjects);
-//        
-//    } failure:^(NSError *error) {
-//
-//        GCLoggerError(@"%@", error);
-//    }];
-    
-    GCTestingScheduleService *testingSchedule = [GCTestingScheduleService new];
-    [testingSchedule getTestingScheduleWithCompletition:^(NSArray *schedule) {
-        
-        GCLoggerInfo(@"%@", schedule);
-    } failure:^(NSError *error) {
-        
-        GCLoggerError(@"%@", error);
-    }];
-    
     
 }
 

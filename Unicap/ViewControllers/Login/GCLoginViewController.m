@@ -23,9 +23,9 @@
     
     GCLoginService *login = [GCLoginService new];
     
-    [GCStudentCredentials sharedInstance].matricula = @"";
-    [GCStudentCredentials sharedInstance].digito = @"";
-    [GCStudentCredentials sharedInstance].senha = @"";
+    [GCStudentCredentials sharedInstance].matricula = @"201210799";
+    [GCStudentCredentials sharedInstance].digito = @"5";
+    [GCStudentCredentials sharedInstance].senha = @"159753";
     
     
     [login doLoginWithCompletition:^(bool succeded) {
