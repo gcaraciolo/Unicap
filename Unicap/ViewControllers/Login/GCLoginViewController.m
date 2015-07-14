@@ -23,9 +23,9 @@
     
     GCLoginService *login = [GCLoginService new];
     
-    [GCStudentCredentials sharedInstance].matricula = @"201210799";
-    [GCStudentCredentials sharedInstance].digito = @"5";
-    [GCStudentCredentials sharedInstance].senha = @"159753";
+    [GCStudentCredentials sharedInstance].matricula = @"";
+    [GCStudentCredentials sharedInstance].digito = @"";
+    [GCStudentCredentials sharedInstance].senha = @"";
     
     
     [login doLoginWithCompletition:^(bool succeded) {
@@ -35,14 +35,14 @@
         GCStudentService *studentService = [GCStudentService new];
         [studentService getStudentInformationsWithCompletition:^(GCStudent *student) {
             
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [appDelegate.window setRootViewController:appDelegate.sideMenuViewController];
             GCLoggerInfo(@"%@",student);
         } failure:^(NSError *error) {
             
             GCLoggerError(@"%@",error);
         }];
         
-        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-        [appDelegate.window setRootViewController:appDelegate.sideMenuViewController];
     } failure:^(NSError *error) {
         
         GCLoggerError(@"%@",error);
