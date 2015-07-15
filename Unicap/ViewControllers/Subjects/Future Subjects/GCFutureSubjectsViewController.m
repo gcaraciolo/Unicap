@@ -14,15 +14,18 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-        GCFutureSubjectsService *futureSubjects = [GCFutureSubjectsService new];
-        [futureSubjects getFutureSubjectsWithCompletition:^(NSArray *subjects) {
     
-            GCLoggerInfo(@"%@", subjects);
+    GCLoggerInfo(@"viewDidLoad");
     
-        } failure:^(NSError *error) {
-    
-            GCLoggerError(@"%@", error);
-        }];
+//        GCFutureSubjectsService *futureSubjects = [GCFutureSubjectsService new];
+//        [futureSubjects getFutureSubjectsWithCompletition:^(NSArray *subjects) {
+//    
+//            GCLoggerInfo(@"%@", subjects);
+//    
+//        } failure:^(NSError *error) {
+//    
+//            GCLoggerError(@"%@", error);
+//        }];
 }
 
 - (void)didReceiveMemoryWarning {

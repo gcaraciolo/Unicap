@@ -892,8 +892,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Past Subjects</string>
 			<key>path</key>
 			<string>Past Subjects</string>
 			<key>sourceTree</key>
@@ -941,8 +939,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Future Subjects</string>
 			<key>path</key>
 			<string>Future Subjects</string>
 			<key>sourceTree</key>
@@ -990,8 +986,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Testing Schedule</string>
 			<key>path</key>
 			<string>Testing Schedule</string>
 			<key>sourceTree</key>
@@ -1027,6 +1021,107 @@
 		<dict>
 			<key>fileRef</key>
 			<string>72C5B78A1B55A7E4006B19D1</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>72F101191B56E92F00F7E02A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>72F1011A1B56E94000F7E02A</string>
+				<string>72F1011B1B56E94000F7E02A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Current Subjects</string>
+			<key>path</key>
+			<string>Current Subjects</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72F1011A1B56E94000F7E02A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>GCCurrentSubjectsViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72F1011B1B56E94000F7E02A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>GCCurrentSubjectsViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72F1011C1B56E94000F7E02A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>72F1011B1B56E94000F7E02A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>72F1011D1B56E96500F7E02A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>72F1011E1B56E98600F7E02A</string>
+				<string>72F1011F1B56E98600F7E02A</string>
+				<string>72C5B7801B55A648006B19D1</string>
+				<string>72C5B7841B55A6FE006B19D1</string>
+				<string>72F101191B56E92F00F7E02A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Subjects</string>
+			<key>path</key>
+			<string>Subjects</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72F1011E1B56E98600F7E02A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>GCSubjectsViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72F1011F1B56E98600F7E02A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>GCSubjectsViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>72F101201B56E98600F7E02A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>72F1011F1B56E98600F7E02A</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
@@ -1168,6 +1263,7 @@
 				<string>72C5B78B1B55A7E4006B19D1</string>
 				<string>AC391B701B41987F000728D5</string>
 				<string>ACBF31811B41C57D00BB12BE</string>
+				<string>72F1011C1B56E94000F7E02A</string>
 				<string>AC391B6D1B41987F000728D5</string>
 				<string>728E6E661B4618F70089F839</string>
 				<string>726237631B4C1259009D880E</string>
@@ -1177,6 +1273,7 @@
 				<string>AC391B961B419929000728D5</string>
 				<string>726237671B4C1B6B009D880E</string>
 				<string>7218B7081B4354C000C53BCC</string>
+				<string>72F101201B56E98600F7E02A</string>
 				<string>72BACBD41B42140000E49DCD</string>
 				<string>726237551B4BFF26009D880E</string>
 				<string>728E6E621B4615560089F839</string>
@@ -1991,11 +2088,10 @@
 		<dict>
 			<key>children</key>
 			<array>
-				<string>72C5B7881B55A7CE006B19D1</string>
-				<string>72C5B7841B55A6FE006B19D1</string>
-				<string>72C5B7801B55A648006B19D1</string>
-				<string>72BACBF71B42AB6100E49DCD</string>
 				<string>72BACBF01B42A6D500E49DCD</string>
+				<string>72F1011D1B56E96500F7E02A</string>
+				<string>72C5B7881B55A7CE006B19D1</string>
+				<string>72BACBF71B42AB6100E49DCD</string>
 				<string>AC391B9B1B419BC5000728D5</string>
 			</array>
 			<key>isa</key>

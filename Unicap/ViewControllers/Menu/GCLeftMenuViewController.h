@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <RESideMenu.h>
 
 @interface GCLeftMenuViewController : UIViewController
+
+@property (strong, nonatomic) RESideMenu *sideMenuViewController;
 
 @end

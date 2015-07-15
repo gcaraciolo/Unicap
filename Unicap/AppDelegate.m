@@ -155,9 +155,9 @@
 #pragma mark - ResideMenu
 
 -(void)createMenu {
-    _sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:self.navigationController
-                                                         leftMenuViewController:self.leftMenuViewController
-                                                        rightMenuViewController:nil];
+    _sideMenuViewController = [[RESideMenu alloc]   initWithContentViewController:self.navigationController
+                                                           leftMenuViewController:self.leftMenuViewController
+                                                          rightMenuViewController:nil];
     
     [_sideMenuViewController setDelegate:self];
     [_sideMenuViewController setMenuPreferredStatusBarStyle:UIStatusBarStyleLightContent];
@@ -178,26 +178,27 @@
 
     [_window setBackgroundColor:[UIColor whiteColor]];
     [_window makeKeyAndVisible];
+    
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
 {
-    GCLoggerInfo(@"menu will show");
+//    GCLoggerInfo(@"menu will show");
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
 {
-    GCLoggerInfo(@"menu did show");
+//    GCLoggerInfo(@"menu did show");
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
 {
-    GCLoggerInfo(@"menu will hide");
+//    GCLoggerInfo(@"menu will hide");
 }
 
 - (void)sideMenu:(RESideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
 {
-    GCLoggerInfo(@"menu did hide");
+//    GCLoggerInfo(@"menu did hide");
 }
 
 @end

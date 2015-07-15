@@ -13,14 +13,17 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    GCTestingScheduleService *testingSchedule = [GCTestingScheduleService new];
-    [testingSchedule getTestingScheduleWithCompletition:^(NSArray *schedule) {
-        
-        GCLoggerInfo(@"%@", schedule);
-    } failure:^(NSError *error) {
-        
-        GCLoggerError(@"%@", error);
-    }];
+
+    GCLoggerInfo(@"viewDidLoad");
+    
+//    GCTestingScheduleService *testingSchedule = [GCTestingScheduleService new];
+//    [testingSchedule getTestingScheduleWithCompletition:^(NSArray *schedule) {
+//        
+//        GCLoggerInfo(@"%@", schedule);
+//    } failure:^(NSError *error) {
+//        
+//        GCLoggerError(@"%@", error);
+//    }];
 }
 
 -(void)didReceiveMemoryWarning {

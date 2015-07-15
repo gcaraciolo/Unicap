@@ -15,14 +15,19 @@
 
 -(void)viewDidLoad {
     [super viewDidLoad];
-    GCPastSubjectsService *pastSubjects = [GCPastSubjectsService new];
-        [pastSubjects getPastSubjectsWithCompletition:^(NSArray *subjects) {
     
-            GCLoggerInfo(@"%@\n%d", subjects, [subjects count]);
-        } failure:^(NSError *error) {
+    GCLoggerInfo(@"viewDidLoad");
     
-            GCLoggerError(@"%@",error);
-        }];
+//    GCPastSubjectsService *pastSubjects = [GCPastSubjectsService new];
+//        [pastSubjects getPastSubjectsWithCompletition:^(NSArray *subjects) {
+//    
+//            GCLoggerInfo(@"%@\n%d", subjects, [subjects count]);
+//        } failure:^(NSError *error) {
+//    
+//            GCLoggerError(@"%@",error);
+//        }];
+//
+
 }
 
 - (void)didReceiveMemoryWarning {
