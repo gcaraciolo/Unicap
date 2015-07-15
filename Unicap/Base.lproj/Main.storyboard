@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZKN-p3-DJU">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -286,6 +287,29 @@
                     <view key="view" contentMode="scaleToFill" id="cJZ-Gd-W6E">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="6cQ-US-6uE">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="EDs-UI-RUf">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="338"/>
+                                    </constraint>
+                                </constraints>
+                                <segments>
+                                    <segment title="Past"/>
+                                    <segment title="Current"/>
+                                    <segment title="Future"/>
+                                </segments>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="EDs-UI-RUf"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="EDs-UI-RUf"/>
+                                    </mask>
+                                </variation>
+                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subjects" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUR-o9-bJf">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -295,23 +319,43 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="WUR-o9-bJf" firstAttribute="top" secondItem="g92-XH-E6s" secondAttribute="bottom" constant="369" id="rYk-h1-h37"/>
-                            <constraint firstAttribute="centerX" secondItem="WUR-o9-bJf" secondAttribute="centerX" constant="-12.5" id="vDs-oK-c74"/>
+                            <constraint firstItem="6cQ-US-6uE" firstAttribute="leading" secondItem="cJZ-Gd-W6E" secondAttribute="leadingMargin" constant="15" id="0cR-3E-2ek"/>
+                            <constraint firstAttribute="centerX" secondItem="6cQ-US-6uE" secondAttribute="centerX" constant="-0.5" id="QuT-IF-F9d"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6cQ-US-6uE" secondAttribute="trailing" constant="15" id="bsa-Sc-Qv8"/>
+                            <constraint firstItem="6cQ-US-6uE" firstAttribute="top" secondItem="g92-XH-E6s" secondAttribute="bottom" constant="43" id="pxd-DP-6LU">
+                                <variation key="heightClass=regular-widthClass=compact" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="WUR-o9-bJf" firstAttribute="top" secondItem="g92-XH-E6s" secondAttribute="bottom" constant="369" id="rYk-h1-h37">
+                                <variation key="heightClass=regular-widthClass=compact" constant="210"/>
+                            </constraint>
+                            <constraint firstAttribute="centerX" secondItem="WUR-o9-bJf" secondAttribute="centerX" constant="-12.5" id="vDs-oK-c74">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-0.5"/>
+                            </constraint>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="6cQ-US-6uE"/>
                                 <exclude reference="WUR-o9-bJf"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="0cR-3E-2ek"/>
+                                <exclude reference="QuT-IF-F9d"/>
+                                <exclude reference="bsa-Sc-Qv8"/>
+                                <exclude reference="pxd-DP-6LU"/>
                                 <exclude reference="rYk-h1-h37"/>
                                 <exclude reference="vDs-oK-c74"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
+                                <include reference="6cQ-US-6uE"/>
                                 <include reference="WUR-o9-bJf"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="0cR-3E-2ek"/>
+                                <include reference="QuT-IF-F9d"/>
+                                <include reference="bsa-Sc-Qv8"/>
+                                <include reference="pxd-DP-6LU"/>
                                 <include reference="rYk-h1-h37"/>
                                 <include reference="vDs-oK-c74"/>
                             </mask>
