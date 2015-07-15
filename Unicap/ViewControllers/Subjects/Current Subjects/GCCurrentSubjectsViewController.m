@@ -8,6 +8,10 @@
 
 #import "GCCurrentSubjectsViewController.h"
 
+@interface GCCurrentSubjectsViewController()
+
+@end
+
 @implementation GCCurrentSubjectsViewController
 
 -(void)viewDidLoad {
