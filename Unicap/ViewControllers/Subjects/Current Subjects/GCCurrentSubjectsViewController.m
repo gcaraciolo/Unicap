@@ -25,4 +25,24 @@
 }
 
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    GCLoggerInfo(@"viewWillAppear");
+}
+
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    GCLoggerInfo(@"viewDidAppear");
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    GCLoggerInfo(@"viewWillDisappear");
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    GCLoggerInfo(@"viewDidDisapear");
+}
+
 @end

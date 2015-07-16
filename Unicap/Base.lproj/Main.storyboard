@@ -226,10 +226,10 @@
             </objects>
             <point key="canvasLocation" x="979.5" y="-299.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Past Subjects View Controller-->
         <scene sceneID="shh-Zm-Ert">
             <objects>
-                <viewController id="jwP-sT-tDH" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GCPastSubjectsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jwP-sT-tDH" customClass="GCPastSubjectsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WDX-8e-v3P"/>
                         <viewControllerLayoutGuide type="bottom" id="lfP-NN-CzI"/>
@@ -237,17 +237,17 @@
                     <view key="view" contentMode="scaleToFill" id="tSO-d4-CYB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.4085807619309888" blue="0.37872661215885106" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvJ-oI-62t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2931" y="-291.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Current Subjects View Controller-->
         <scene sceneID="26K-AW-snX">
             <objects>
-                <viewController id="qBQ-UW-fdm" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GCCurrentSubjectsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qBQ-UW-fdm" customClass="GCCurrentSubjectsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="OE2-ol-UAN"/>
                         <viewControllerLayoutGuide type="bottom" id="PP5-xO-kR7"/>
@@ -255,17 +255,17 @@
                     <view key="view" contentMode="scaleToFill" id="5Xx-55-PA8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.25961653515409167" green="1" blue="0.28552173928977564" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hv5-dB-rxn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2931" y="399.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Future Subjects View Controller-->
         <scene sceneID="ZQT-ff-vbc">
             <objects>
-                <viewController id="au1-dc-0ar" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GCFutureSubjectsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="au1-dc-0ar" customClass="GCFutureSubjectsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Vfv-9l-YUG"/>
                         <viewControllerLayoutGuide type="bottom" id="3fN-un-7ey"/>
@@ -273,7 +273,7 @@
                     <view key="view" contentMode="scaleToFill" id="fiK-IN-Xaq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.78275981616106538" green="0.69067274147651181" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bxy-dY-vJf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -300,42 +300,33 @@
                                     <segment title="Future"/>
                                 </segments>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="SON-yf-NvL">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-tF-IBP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.86740451388888884" green="0.76345596825635154" blue="0.47044716470526332" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="JD6-fM-Bjl"/>
-                                    <constraint firstAttribute="height" constant="721" id="iRf-7O-i0R"/>
+                                    <constraint firstAttribute="width" constant="400" id="1J9-Lu-SFy"/>
+                                    <constraint firstAttribute="height" constant="727" id="t0P-af-cZd"/>
                                 </constraints>
-                                <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="W5p-yS-UEq">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="W5p-yS-UEq" id="uP5-WJ-HCH">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="JD6-fM-Bjl"/>
-                                        <exclude reference="iRf-7O-i0R"/>
+                                        <exclude reference="1J9-Lu-SFy"/>
+                                        <exclude reference="t0P-af-cZd"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <mask key="constraints">
-                                        <include reference="JD6-fM-Bjl"/>
-                                        <include reference="iRf-7O-i0R"/>
+                                        <include reference="1J9-Lu-SFy"/>
+                                        <include reference="t0P-af-cZd"/>
                                     </mask>
                                 </variation>
-                            </tableView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="6cQ-US-6uE" firstAttribute="leading" secondItem="cJZ-Gd-W6E" secondAttribute="leadingMargin" constant="15" id="0cR-3E-2ek"/>
-                            <constraint firstItem="SON-yf-NvL" firstAttribute="top" secondItem="g92-XH-E6s" secondAttribute="bottom" constant="59" id="FqF-Wc-255"/>
+                            <constraint firstAttribute="centerX" secondItem="hFY-tF-IBP" secondAttribute="centerX" id="5qP-Eu-Z7R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6cQ-US-6uE" secondAttribute="trailing" constant="15" id="bsa-Sc-Qv8"/>
-                            <constraint firstAttribute="centerX" secondItem="SON-yf-NvL" secondAttribute="centerX" id="eIy-DS-Bdl"/>
+                            <constraint firstItem="hFY-tF-IBP" firstAttribute="top" secondItem="g92-XH-E6s" secondAttribute="bottom" constant="53" id="j5k-vn-FWb"/>
                             <constraint firstItem="6cQ-US-6uE" firstAttribute="top" secondItem="g92-XH-E6s" secondAttribute="bottom" constant="43" id="pxd-DP-6LU">
                                 <variation key="heightClass=regular-widthClass=compact" constant="17"/>
                             </constraint>
@@ -343,33 +334,33 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="6cQ-US-6uE"/>
-                                <exclude reference="SON-yf-NvL"/>
+                                <exclude reference="hFY-tF-IBP"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="0cR-3E-2ek"/>
                                 <exclude reference="bsa-Sc-Qv8"/>
                                 <exclude reference="pxd-DP-6LU"/>
-                                <exclude reference="FqF-Wc-255"/>
-                                <exclude reference="eIy-DS-Bdl"/>
+                                <exclude reference="5qP-Eu-Z7R"/>
+                                <exclude reference="j5k-vn-FWb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="6cQ-US-6uE"/>
-                                <include reference="SON-yf-NvL"/>
+                                <include reference="hFY-tF-IBP"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="0cR-3E-2ek"/>
                                 <include reference="bsa-Sc-Qv8"/>
                                 <include reference="pxd-DP-6LU"/>
-                                <include reference="FqF-Wc-255"/>
-                                <include reference="eIy-DS-Bdl"/>
+                                <include reference="5qP-Eu-Z7R"/>
+                                <include reference="j5k-vn-FWb"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="currentView" destination="hFY-tF-IBP" id="rtx-vh-p87"/>
                         <outlet property="segmentedControl" destination="6cQ-US-6uE" id="kEl-OV-R6m"/>
-                        <outlet property="tableView" destination="SON-yf-NvL" id="z0m-5T-s0X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="32u-Fo-yF5" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,11 +7,22 @@
 //
 
 #import "GCSubjectsViewController.h"
+#import "GCSubjectsSegmentedControlProtocol.h"
 
-@interface GCSubjectsViewController()
+#import "GCPastSubjectsViewController.h"
+#import "GCCurrentSubjectsViewController.h"
+#import "GCFutureSubjectsViewController.h"
+
+
+@interface GCSubjectsViewController() <GCSubjectsSegmentedControlProtocol>
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIView *currentView;
+
+@property (strong, nonatomic) GCPastSubjectsViewController *pastSubjectsViewController;
+@property (strong, nonatomic) GCCurrentSubjectsViewController *currentSubjectsViewController;
+@property (strong, nonatomic) GCFutureSubjectsViewController *futureSubjectsViewController;
+
 
 @end
 
@@ -19,7 +30,7 @@
 
 #pragma mark - Lifecycle
 
--(void)viewDidLoad {
+- (void)viewDidLoad {
     
     [super viewDidLoad];
     
@@ -28,30 +39,56 @@
                     forControlEvents:UIControlEventValueChanged];
     
     GCLoggerInfo(@"viewDidLoad");
-    
-    [self loadViewControllerFromSegmentedControl:1];
-    
+    [self loadViewControllers];
 }
 
--(void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning {
     
     [super didReceiveMemoryWarning];
     
 }
 
+- (void)loadViewControllers {
+    NSString *storyboardName = [[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName
+                                                         bundle:[NSBundle mainBundle]];
+    
+    self.pastSubjectsViewController = [storyboard
+                                       instantiateViewControllerWithIdentifier:
+                                       NSStringFromClass([GCPastSubjectsViewController class])];
+    self.pastSubjectsViewController.view.frame = self.currentView.frame;
+    
+    self.currentSubjectsViewController = [storyboard
+                                          instantiateViewControllerWithIdentifier:
+                                          NSStringFromClass([GCCurrentSubjectsViewController class])];
+    self.currentSubjectsViewController.view.frame = self.currentView.frame;
+    
+    self.futureSubjectsViewController = [storyboard
+                                         instantiateViewControllerWithIdentifier:
+                                         NSStringFromClass([GCFutureSubjectsViewController class])];
+    self.futureSubjectsViewController.view.frame = self.currentView.frame;
+
+    
+    [self addChildViewController:self.pastSubjectsViewController];
+    [self addChildViewController:self.currentSubjectsViewController];
+    [self addChildViewController:self.futureSubjectsViewController];
+    
+}
+
 #pragma mark - SegmentedControl
 
--(void)didClickOnSegmentedControl:(UISegmentedControl *)segmented {
-    
+- (void)didClickOnSegmentedControl:(UISegmentedControl *)segmented {
+    NSLog(@"%@", self.currentView);
+    NSLog(@"%@", self.pastSubjectsViewController.view);
     switch (segmented.selectedSegmentIndex) {
         case 0:
-            [self loadViewControllerFromSegmentedControl:0];
+            [self loadPresentationView:self.pastSubjectsViewController.view];
             break;
         case 1:
-            [self loadViewControllerFromSegmentedControl:1];
+            [self loadPresentationView:self.currentSubjectsViewController.view];
             break;
         case 2:
-            [self loadViewControllerFromSegmentedControl:2];
+            [self loadPresentationView:self.futureSubjectsViewController.view];
             break;
         default:
             break;
@@ -59,9 +96,12 @@
     
 }
 
--(void)loadViewControllerFromSegmentedControl:(NSInteger)selectedSegmentIndex {
+#pragma mark - GCSubjectsSegmentedControlProtocol
 
-    GCLoggerInfo(@"load %d subjects", selectedSegmentIndex);
+- (void)loadPresentationView:(UIView *)view {
+
+    [self.currentView addSubview:view];
+    
 }
 
 
