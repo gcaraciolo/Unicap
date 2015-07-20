@@ -54,5 +54,10 @@
     GCLoggerInfo(@"viewDidDisapear");
 }
 
+-(void)updateViewConstraints {
+    [super updateViewConstraints];
+    GCLoggerInfo(@"updateViewConstraints");
+}
+
 
 @end

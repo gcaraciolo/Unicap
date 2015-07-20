@@ -237,12 +237,71 @@
                     <view key="view" contentMode="scaleToFill" id="tSO-d4-CYB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.4085807619309888" blue="0.37872661215885106" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="t4N-rg-HUh">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="800" id="kF6-in-f4Y">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="780"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="400" id="wF3-bd-BId"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="subjectsCellID" id="Tog-zm-bi2">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tog-zm-bi2" id="S2f-3r-zal">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kF6-in-f4Y"/>
+                                        <exclude reference="wF3-bd-BId"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="kF6-in-f4Y"/>
+                                        <include reference="wF3-bd-BId"/>
+                                    </mask>
+                                </variation>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="t4N-rg-HUh" secondAttribute="centerX" id="w56-TM-oLB"/>
+                            <constraint firstItem="t4N-rg-HUh" firstAttribute="top" secondItem="WDX-8e-v3P" secondAttribute="bottom" constant="-20" id="xah-ks-YYL">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="t4N-rg-HUh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="w56-TM-oLB"/>
+                                <exclude reference="xah-ks-YYL"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="t4N-rg-HUh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="w56-TM-oLB"/>
+                                <include reference="xah-ks-YYL"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="t4N-rg-HUh" id="GKY-C1-QKc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OvJ-oI-62t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2931" y="-291.75"/>
+            <point key="canvasLocation" x="2931" y="-292.5"/>
         </scene>
         <!--Current Subjects View Controller-->
         <scene sceneID="26K-AW-snX">

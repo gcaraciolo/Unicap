@@ -84,7 +84,7 @@
     }
     
     self.pastSubjects = pastSubjects;
-    [[GCStudent sharedInstance] setPastSubjects:pastSubjects];
+//    [[GCStudent sharedInstance] setPastSubjects:pastSubjects];
     
     
 }

@@ -14,7 +14,7 @@
 #import "GCFutureSubjectsViewController.h"
 
 
-@interface GCSubjectsViewController() <GCSubjectsSegmentedControlProtocol>
+@interface GCSubjectsViewController()
 
 @property (weak, nonatomic) IBOutlet UISegmentedControl *segmentedControl;
 @property (weak, nonatomic) IBOutlet UIView *currentView;
@@ -78,17 +78,22 @@
 #pragma mark - SegmentedControl
 
 - (void)didClickOnSegmentedControl:(UISegmentedControl *)segmented {
-    NSLog(@"%@", self.currentView);
-    NSLog(@"%@", self.pastSubjectsViewController.view);
+
     switch (segmented.selectedSegmentIndex) {
         case 0:
-            [self loadPresentationView:self.pastSubjectsViewController.view];
+            [self.currentSubjectsViewController.view removeFromSuperview];
+            [self.futureSubjectsViewController.view removeFromSuperview];
+            [self.currentView addSubview:self.pastSubjectsViewController.view];
             break;
         case 1:
-            [self loadPresentationView:self.currentSubjectsViewController.view];
+            [self.pastSubjectsViewController.view removeFromSuperview];
+            [self.futureSubjectsViewController.view removeFromSuperview];
+            [self.currentView addSubview:self.currentSubjectsViewController.view];
             break;
         case 2:
-            [self loadPresentationView:self.futureSubjectsViewController.view];
+            [self.pastSubjectsViewController.view removeFromSuperview];
+            [self.currentSubjectsViewController.view removeFromSuperview];
+            [self.currentView addSubview:self.futureSubjectsViewController.view];
             break;
         default:
             break;
@@ -96,14 +101,10 @@
     
 }
 
-#pragma mark - GCSubjectsSegmentedControlProtocol
-
-- (void)loadPresentationView:(UIView *)view {
-
-    [self.currentView addSubview:view];
-    
+-(void)updateViewConstraints {
+    [super updateViewConstraints];
+    GCLoggerInfo(@"updateViewConstraints");
 }
-
 
 
 @end
