@@ -12,6 +12,7 @@
 #import "GCSubjectsViewController.h"
 #import "GCPanelViewController.h"
 #import "GCTestingScheduleViewController.h"
+#import "GCClassesTableViewController.h"
 
 @interface GCLeftMenuViewController() <UITableViewDelegate, UITableViewDataSource>
 
@@ -106,10 +107,7 @@
                 [self instatiateViewController:NSStringFromClass([GCTestingScheduleViewController class])];
                 break;
             case 3:
-                
-                break;
-            case 4:
-                
+                [self instatiateViewController:NSStringFromClass([GCClassesTableViewController class])];
                 break;
             default:
                 break;
@@ -156,8 +154,7 @@
                                 @"Painel",
                                 @"Disciplinas",
                                 @"Calendário",
-                                @"Aulas",
-                                @"Notas"
+                                @"Aulas"
                                 ];
     
     self.secondSectionTable = @[

@@ -229,6 +229,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="GCPastSubjectsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yTx-kD-bMY" customClass="GCPastSubjectsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="l3Y-m8-Wap">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -277,6 +278,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="GCCurrentSubjectsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pLu-6s-JNe" customClass="GCCurrentSubjectsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="583-ZH-dB8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -309,6 +311,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Max-lO-Z6n"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BKH-aB-g4e">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -322,6 +325,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="GCTestingScheduleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8ky-kl-rg2" customClass="GCTestingScheduleViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="oAj-Pw-8Qr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -342,6 +346,31 @@
             </objects>
             <point key="canvasLocation" x="979.5" y="1708.5"/>
         </scene>
+        <!--Classes Table View Controller-->
+        <scene sceneID="DMO-I3-Me0">
+            <objects>
+                <tableViewController storyboardIdentifier="GCClassesTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5gA-nE-l80" customClass="GCClassesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PKo-Wb-wcj">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classCellID" id="bTd-5B-PvM">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bTd-5B-PvM" id="If0-Au-Naf">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5gA-nE-l80" id="QoY-ux-QeB"/>
+                            <outlet property="delegate" destination="5gA-nE-l80" id="hjG-79-ka6"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ohY-oE-LqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.5" y="2367.75"/>
+        </scene>
         <!--Testing Schedule Details View Controller-->
         <scene sceneID="Esi-ds-Dne">
             <objects>
@@ -351,6 +380,7 @@
                         <viewControllerLayoutGuide type="bottom" id="8Lu-VJ-OvC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6VJ-Oe-PSo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -364,6 +394,7 @@
             <objects>
                 <tableViewController storyboardIdentifier="GCFutureSubjectsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FY2-04-Aeu" customClass="GCFutureSubjectsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="y97-0F-RvL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

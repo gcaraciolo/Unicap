@@ -20,6 +20,7 @@
 		7262376A1B4C2064009D880E /* GCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 726237691B4C2064009D880E /* GCLoginViewController.m */; };
 		728E6E621B4615560089F839 /* GCScheduleUnicap.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E6E611B4615560089F839 /* GCScheduleUnicap.m */; };
 		728E6E661B4618F70089F839 /* GCStudentService.m in Sources */ = {isa = PBXBuildFile; fileRef = 728E6E651B4618F70089F839 /* GCStudentService.m */; };
+		7292A3871B5ED8C40060942C /* GCClassesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292A3861B5ED8C40060942C /* GCClassesTableViewController.m */; };
 		72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBD31B42140000E49DCD /* GCStudentCredentials.m */; };
 		72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBE41B4227B600E49DCD /* GCRequestError.m */; };
 		72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEA1B42A18D00E49DCD /* GCStudent.m */; };
@@ -85,6 +86,8 @@
 		728E6E611B4615560089F839 /* GCScheduleUnicap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCScheduleUnicap.m; sourceTree = "<group>"; };
 		728E6E641B4618F70089F839 /* GCStudentService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentService.h; sourceTree = "<group>"; };
 		728E6E651B4618F70089F839 /* GCStudentService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentService.m; sourceTree = "<group>"; };
+		7292A3851B5ED8C40060942C /* GCClassesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCClassesTableViewController.h; sourceTree = "<group>"; };
+		7292A3861B5ED8C40060942C /* GCClassesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCClassesTableViewController.m; sourceTree = "<group>"; };
 		72BACBD21B42140000E49DCD /* GCStudentCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentCredentials.h; sourceTree = "<group>"; };
 		72BACBD31B42140000E49DCD /* GCStudentCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentCredentials.m; sourceTree = "<group>"; };
 		72BACBE31B4227B600E49DCD /* GCRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestError.h; sourceTree = "<group>"; };
@@ -286,6 +289,15 @@
 				728E6E651B4618F70089F839 /* GCStudentService.m */,
 			);
 			path = Student;
+			sourceTree = "<group>";
+		};
+		7292A3831B5ED8780060942C /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				7292A3851B5ED8C40060942C /* GCClassesTableViewController.h */,
+				7292A3861B5ED8C40060942C /* GCClassesTableViewController.m */,
+			);
+			name = Class;
 			sourceTree = "<group>";
 		};
 		72BACBD11B4213CE00E49DCD /* Model */ = {
@@ -500,10 +512,11 @@
 			isa = PBXGroup;
 			children = (
 				72BACBF01B42A6D500E49DCD /* Menu */,
+				AC391B9B1B419BC5000728D5 /* Login */,
+				72BACBF71B42AB6100E49DCD /* Panel */,
 				72F1011D1B56E96500F7E02A /* Subjects */,
 				72C5B7881B55A7CE006B19D1 /* Testing Schedule */,
-				72BACBF71B42AB6100E49DCD /* Panel */,
-				AC391B9B1B419BC5000728D5 /* Login */,
+				7292A3831B5ED8780060942C /* Class */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -701,6 +714,7 @@
 				ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */,
 				AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */,
 				72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */,
+				7292A3871B5ED8C40060942C /* GCClassesTableViewController.m in Sources */,
 				AC99E1D71B4B0D1D0099FD34 /* GCPastSubject.m in Sources */,
 				72BACBFA1B42AB7700E49DCD /* GCPanelViewController.m in Sources */,
 				72C5B78B1B55A7E4006B19D1 /* GCTestingScheduleViewController.m in Sources */,
