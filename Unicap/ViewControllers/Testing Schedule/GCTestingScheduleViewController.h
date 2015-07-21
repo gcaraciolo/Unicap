@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GCTestingScheduleViewController : UIViewController
+@interface GCTestingScheduleViewController : UITableViewController
 
 @end

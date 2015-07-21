@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GCCurrentSubjectsViewController : UIViewController
+@interface GCCurrentSubjectsViewController : UITableViewController
 
 @end

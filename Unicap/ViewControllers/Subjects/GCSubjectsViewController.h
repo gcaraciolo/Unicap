@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GCSubjectsViewController : UIViewController
+@interface GCSubjectsViewController : UITabBarController
 
 @end

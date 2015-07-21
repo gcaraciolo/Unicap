@@ -11,6 +11,7 @@
 
 #import "GCSubjectsViewController.h"
 #import "GCPanelViewController.h"
+#import "GCTestingScheduleViewController.h"
 
 @interface GCLeftMenuViewController() <UITableViewDelegate, UITableViewDataSource>
 
@@ -102,7 +103,7 @@
                 [self instatiateViewController:NSStringFromClass([GCSubjectsViewController class])];
                 break;
             case 2:
-                
+                [self instatiateViewController:NSStringFromClass([GCTestingScheduleViewController class])];
                 break;
             case 3:
                 

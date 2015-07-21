@@ -14,7 +14,7 @@
 
 @interface GCCurrentSubjectsServices()
 
-@property (strong, nonatomic) NSMutableSet *currentSubjects;
+@property (strong, nonatomic) NSMutableArray *currentSubjects;
 
 @end
 
@@ -22,11 +22,11 @@
 
 #pragma mark - Request
 
-- (void)getInformationsFromCurrentPeriodWithCompletition:(void (^)(NSMutableSet *))completition
+- (void)getInformationsFromCurrentPeriodWithCompletition:(void (^)(NSArray *))completition
                                                  failure:(void (^)(NSError *))failure {
     
     
-    self.currentSubjects = [NSMutableSet new];
+    self.currentSubjects = [NSMutableArray new];
     
     NSMutableDictionary *params = [NSMutableDictionary new];
     params[kROUTINE] = kROUTINE_SUBJECTS_CURRENT;

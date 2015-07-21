@@ -9,12 +9,13 @@
 #import "GCPastSubjectsViewController.h"
 #import "GCPastSubjectsService.h"
 #import "GCPastSubject.h"
+#import "GCSubjectDetailsViewController.h"
+#import "GCSubjectDetails.h"
 
-@interface GCPastSubjectsViewController() <UITableViewDelegate, UITableViewDataSource>
+@interface GCPastSubjectsViewController()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (strong, nonatomic) NSArray *pastSubjects;
+@property (strong, nonatomic) NSArray *subjects;
 
 @end
 
@@ -25,32 +26,31 @@
 -(void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
     GCLoggerInfo(@"viewDidLoad");
     
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
+//    self.subjects = @[@"hhhasdasdadsadasdadaadasdd",
+//                          @"hhhasdasdadsadasdadaadasdd",
+//                          @"hhhahsdasdadsadasdadaadasd",
+//                          @"hhhasdasdadsadasdadaadasdd",
+//                          @"asdasdadsadasdadaadasddsad",
+//                          @"asdasdadsadasdadaadasddsad",
+//                          @"asdasdadsadasdadaadasddsad",
+//                          @"asdasdadsadasdadaadasddsad",
+//                          @"asdasdadsadasdadaadasddsad"
+//                         ];
     
-    self.pastSubjects = @[@"hhhasdasdadsadasdadaadasdd",
-                          @"hhhasdasdadsadasdadaadasdd",
-                          @"hhhahsdasdadsadasdadaadasd",
-                          @"hhhasdasdadsadasdadaadasdd",
-                          @"asdasdadsadasdadaadasddsad",
-                          @"asdasdadsadasdadaadasddsad",
-                          @"asdasdadsadasdadaadasddsad",
-                          @"asdasdadsadasdadaadasddsad",
-                          @"asdasdadsadasdadaadasddsad"
-                         ];
-    
-//    GCPastSubjectsService *pastSubjects = [GCPastSubjectsService new];
-//    [pastSubjects getPastSubjectsWithCompletition:^(NSArray *subjects) {
-//
-//        GCLoggerInfo(@"received past subjects");
-//        self.pastSubjects = subjects;
-//        [self.tableView reloadData];
-//    } failure:^(NSError *error) {
-//
-//        GCLoggerError(@"%@",error);
-//    }];
+    GCPastSubjectsService *pastSubjects = [GCPastSubjectsService new];
+    [pastSubjects getPastSubjectsWithCompletition:^(NSArray *subjects) {
+
+        GCLoggerInfo(@"received past subjects");
+        self.subjects = subjects;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+
+        GCLoggerError(@"%@",error);
+    }];
 
 
 }
@@ -80,6 +80,14 @@
     GCLoggerInfo(@"viewDidDisapear");
 }
 
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    CGRect rect = self.navigationController.navigationBar.frame;
+    float y = rect.size.height + rect.origin.y;
+    self.tableView.contentInset = UIEdgeInsetsMake(y ,0,0,0);
+}
+
 #pragma mark - TableView
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -87,7 +95,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.pastSubjects.count;
+    return self.subjects.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -108,14 +116,30 @@
 
 -(void)fillTableViewCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
-//    GCPastSubject *pastSubject = self.pastSubjects[indexPath.row];
-    cell.textLabel.text = self.pastSubjects[indexPath.row];
+    GCPastSubject *pastSubject = self.subjects[indexPath.row];
+//    cell.textLabel.text = self.subjects[indexPath.row];
+    cell.textLabel.text = pastSubject.name;
 }
 
--(void)updateViewConstraints {
-    [super updateViewConstraints];
-    GCLoggerInfo(@"updateViewConstraints");
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *storyboardName = [[NSBundle mainBundle].infoDictionary objectForKey:@"UIMainStoryboardFile"];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
+    
+    GCSubjectDetailsViewController *subjectDetailsVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([GCSubjectDetailsViewController class])];
+    
+    GCSubjectDetails *subjectDetails = [GCSubjectDetails new];
+    GCPastSubject *pastSubject = self.subjects[indexPath.row];
+    subjectDetails.name = pastSubject.name;
+    subjectDetails.code = pastSubject.code;
+    subjectDetails.period = pastSubject.period;
+
+    subjectDetailsVC.subjectDetails = subjectDetails;
+    
+    [self.navigationController pushViewController:subjectDetailsVC
+                                         animated:YES];
+
 }
+
 
 
 @end

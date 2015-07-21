@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GCPastSubjectsViewController : UIViewController
+@interface GCPastSubjectsViewController : UITableViewController
 
 @end
