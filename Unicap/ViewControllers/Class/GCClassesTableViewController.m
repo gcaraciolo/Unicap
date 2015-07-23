@@ -62,8 +62,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
     
-    [self fillCell:cell
-      forIndexPath:indexPath];
+//    [self fillCell:cell
+//      forIndexPath:indexPath];
     
     return cell;
 }
