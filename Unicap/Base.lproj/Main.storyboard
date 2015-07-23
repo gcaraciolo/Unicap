@@ -356,7 +356,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classCellID" rowHeight="100" id="bTd-5B-PvM">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="classCellID" rowHeight="100" id="bTd-5B-PvM" customClass="GCClassesTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bTd-5B-PvM" id="If0-Au-Naf">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -423,7 +423,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="srg-Wa-hW6" secondAttribute="trailing" constant="8" id="1kg-oK-ad7"/>
                                                 <constraint firstItem="qV8-Eh-b2u" firstAttribute="centerX" secondItem="Jgw-9l-NzG" secondAttribute="centerX" id="4kp-2U-lT1"/>
-                                                <constraint firstItem="srg-Wa-hW6" firstAttribute="top" secondItem="Jgw-9l-NzG" secondAttribute="bottom" constant="20" id="9TM-Z9-iaD"/>
+                                                <constraint firstItem="srg-Wa-hW6" firstAttribute="top" secondItem="Jgw-9l-NzG" secondAttribute="bottom" constant="20" id="9TM-Z9-iaD">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="7"/>
+                                                </constraint>
                                                 <constraint firstAttribute="bottom" secondItem="oOb-x2-f8X" secondAttribute="bottom" constant="8" id="9uu-d6-88Q">
                                                     <variation key="heightClass=regular-widthClass=compact" constant="12"/>
                                                 </constraint>
@@ -434,8 +436,12 @@
                                                 <constraint firstItem="wYr-Mj-qKZ" firstAttribute="top" secondItem="PZ7-X2-7Qc" secondAttribute="top" constant="8" id="QDR-6h-prq"/>
                                                 <constraint firstItem="Jgw-9l-NzG" firstAttribute="top" secondItem="PZ7-X2-7Qc" secondAttribute="top" constant="8" id="Zh8-VP-A90"/>
                                                 <constraint firstItem="oOb-x2-f8X" firstAttribute="leading" secondItem="wYr-Mj-qKZ" secondAttribute="trailing" constant="8" id="ZyF-pP-ooN"/>
-                                                <constraint firstItem="qV8-Eh-b2u" firstAttribute="top" secondItem="Jgw-9l-NzG" secondAttribute="bottom" constant="21" id="cmh-cl-uxf"/>
-                                                <constraint firstItem="O4q-qX-Jn5" firstAttribute="top" secondItem="Jgw-9l-NzG" secondAttribute="bottom" constant="21" id="f5i-mD-2qj"/>
+                                                <constraint firstItem="qV8-Eh-b2u" firstAttribute="top" secondItem="Jgw-9l-NzG" secondAttribute="bottom" constant="21" id="cmh-cl-uxf">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                                </constraint>
+                                                <constraint firstItem="O4q-qX-Jn5" firstAttribute="top" secondItem="Jgw-9l-NzG" secondAttribute="bottom" constant="21" id="f5i-mD-2qj">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="8"/>
+                                                </constraint>
                                                 <constraint firstAttribute="trailing" secondItem="Jgw-9l-NzG" secondAttribute="trailing" constant="8" id="m6M-sM-iUG"/>
                                                 <constraint firstItem="Jgw-9l-NzG" firstAttribute="leading" secondItem="wYr-Mj-qKZ" secondAttribute="trailing" constant="8" id="mwc-BU-mDy"/>
                                                 <constraint firstAttribute="trailing" secondItem="oOb-x2-f8X" secondAttribute="trailing" constant="8" id="sDl-AM-dGl"/>
@@ -476,7 +482,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ohY-oE-LqZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="979" y="2367"/>
+            <point key="canvasLocation" x="978" y="2367"/>
         </scene>
         <!--Testing Schedule Details View Controller-->
         <scene sceneID="Esi-ds-Dne">

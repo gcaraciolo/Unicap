@@ -27,30 +27,30 @@
     [GCStudentCredentials sharedInstance].digito = @"5";
     [GCStudentCredentials sharedInstance].senha = @"159753";
     
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    [appDelegate.window setRootViewController:appDelegate.sideMenuViewController];
+//    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+//    [appDelegate.window setRootViewController:appDelegate.sideMenuViewController];
 
     
-//    [login doLoginWithCompletition:^(bool succeded) {
-//        
-//        [[GCStudentCredentials sharedInstance] saveStudentCredentials];
-//        
-//        GCStudentService *studentService = [GCStudentService new];
-//        [studentService getStudentInformationsWithCompletition:^(GCStudent *student) {
-//            
-//            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-//            [appDelegate.window setRootViewController:appDelegate.sideMenuViewController];
-//            GCLoggerInfo(@"%@",student);
-//        } failure:^(NSError *error) {
-//            
-//            GCLoggerError(@"%@",error);
-//        }];
-//        
-//    } failure:^(NSError *error) {
-//        
-//        GCLoggerError(@"%@",error);
-//    }];
-//    
+    [login doLoginWithCompletition:^(bool succeded) {
+        
+        [[GCStudentCredentials sharedInstance] saveStudentCredentials];
+        
+        GCStudentService *studentService = [GCStudentService new];
+        [studentService getStudentInformationsWithCompletition:^(GCStudent *student) {
+            
+            AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+            [appDelegate.window setRootViewController:appDelegate.sideMenuViewController];
+            GCLoggerInfo(@"%@",student);
+        } failure:^(NSError *error) {
+            
+            GCLoggerError(@"%@",error);
+        }];
+        
+    } failure:^(NSError *error) {
+        
+        GCLoggerError(@"%@",error);
+    }];
+    
     
 }
 

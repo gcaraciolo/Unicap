@@ -29,25 +29,40 @@
 }
 */
 
+-(instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        [self awakeFromNib];
+    }
+    return self;
+}
 
-
+-(void)awakeFromNib {
+    
+    [self fillViewImage:nil
+         txtSubjectName:@"a"
+               txtStart:@"1"
+               txtClass:@"a702"
+                 txtEnd:@"2"];
+}
 
 - (void)fillViewImage:(UIView *)viewImage
-       lblSubjectName:(UILabel *)lblSubjectName
-             lblStart:(UILabel *)lblStart
-             lblClass:(UILabel *)lblClass
-               lblEnd:(UILabel *)lblEnd {
+       txtSubjectName:(NSString *)txtSubjectName
+             txtStart:(NSString *)txtStart
+             txtClass:(NSString *)txtClass
+               txtEnd:(NSString *)txtEnd {
     
     self.viewImage = viewImage;
-    self.lblSubjectName = lblSubjectName;
-    self.lblStart = lblStart;
-    self.lblClass = lblClass;
-    self.lblEnd = lblEnd;
+    self.lblSubjectName.text = txtSubjectName;
+    self.lblStart.text = txtStart;
+    self.lblClass.text = txtClass;
+    self.lblEnd.text = txtEnd;
     
 }
 
 - (void)changeViewProgressStatus:(NSInteger)percent {
-    //TODO
+    //TODO: create another view and change its width according to the time.
 }
 
 @end
