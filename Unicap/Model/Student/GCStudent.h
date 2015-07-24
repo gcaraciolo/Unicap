@@ -43,7 +43,10 @@
 
 
 +(instancetype)sharedInstance;
+
 -(void)saveCourseCoefficient:(NSNumber *)courseCoefficient
           andLastCoefficient:(NSNumber *)lastCoefficient;
+
+- (NSArray *)getSubjectsFromDay:(NSInteger)day;
 
 @end

@@ -9,12 +9,15 @@
 #import "GCClassesTableViewController.h"
 #import "GCCurrentSubjectsServices.h"
 #import "GCSubject.h"
-#import "GCClassesTableViewCell.h"
+#import "GCDayScheduleTableViewCell.h"
+#import "GCStudent.h"
 
 @interface GCClassesTableViewController ()
 
-@property (strong, nonatomic) NSArray *subjects;
 @property (strong, nonatomic) NSArray *days;
+
+@property (strong, nonatomic) GCStudent *student;
+
 
 @end
 
@@ -38,10 +41,12 @@
                   @"Sábado"
                   ];
     
+    self.student = [GCStudent new];
+    
     GCCurrentSubjectsServices *service = [GCCurrentSubjectsServices new];
     [service getInformationsFromCurrentPeriodWithCompletition:^(NSArray *subjects) {
-        
-        self.subjects = subjects;
+
+        self.student.currentSubjects = subjects;
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         
@@ -71,7 +76,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"classCellID";
-    GCClassesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+    GCDayScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
     
     [self fillCell:cell
@@ -80,11 +85,13 @@
     return cell;
 }
 
-- (void)fillCell:(GCClassesTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+- (void)fillCell:(GCDayScheduleTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
-//    GCSubject *subject = self.subjects[indexPath.row];
-//    cell.textLabel.text = subject.name;
     cell.lblDay.text = self.days[indexPath.row];
+
+    //TODO:
+    [cell fillCellWithSubjects:[self.student getSubjectsFromDay:indexPath.row]];
+//    [cell fillCellWithSubject:self.student.currentSubjects[indexPath.row]];
 
 }
 

@@ -30,5 +30,11 @@
     
 }
 
+- (NSArray *)getSubjectsFromDay:(NSInteger)day {
+    //TODO
+    
+    return [self.currentSubjects copy];
+}
+
 
 @end

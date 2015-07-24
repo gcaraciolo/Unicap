@@ -10,4 +10,10 @@
 
 @interface GCClassScheduleSingleView : UIView
 
+- (void)fillViewImage:(UIView *)viewImage
+       txtSubjectName:(NSString *)txtSubjectName
+             txtStart:(NSString *)txtStart
+             txtClass:(NSString *)txtClass
+               txtEnd:(NSString *)txtEnd;
+
 @end

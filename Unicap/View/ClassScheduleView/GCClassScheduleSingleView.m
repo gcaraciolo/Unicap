@@ -33,19 +33,19 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        [self awakeFromNib];
+//        [self awakeFromNib];
     }
     return self;
 }
 
--(void)awakeFromNib {
-    
-    [self fillViewImage:nil
-         txtSubjectName:@"a"
-               txtStart:@"1"
-               txtClass:@"a702"
-                 txtEnd:@"2"];
-}
+//-(void)awakeFromNib {
+//    
+//    [self fillViewImage:nil
+//         txtSubjectName:@"a"
+//               txtStart:@"1"
+//               txtClass:@"a702"
+//                 txtEnd:@"2"];
+//}
 
 - (void)fillViewImage:(UIView *)viewImage
        txtSubjectName:(NSString *)txtSubjectName
