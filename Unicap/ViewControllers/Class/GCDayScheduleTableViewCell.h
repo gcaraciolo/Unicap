@@ -11,6 +11,7 @@
 
 @interface GCDayScheduleTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet UILabel *lblDay;
 @property (weak, nonatomic) IBOutlet GCClassScheduleSingleView *viewDataSource;
 
