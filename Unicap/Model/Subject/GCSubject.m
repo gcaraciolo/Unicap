@@ -10,6 +10,9 @@
 
 @implementation GCSubject
 
+- (NSInteger)numberOfClassesPerWeek {
+    return  2;
+}
 
 
 @end

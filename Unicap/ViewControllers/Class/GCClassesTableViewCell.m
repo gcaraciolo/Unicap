@@ -8,6 +8,10 @@
 
 #import "GCClassesTableViewCell.h"
 
+@interface GCClassesTableViewCell()
+
+@end
+
 @implementation GCClassesTableViewCell
 
 - (void)awakeFromNib {
@@ -18,14 +22,5 @@
     [super setSelected:selected animated:animated];
 }
 
--(void)setFrame:(CGRect)frame {
-    
-    frame.size.width -= 40;
-    frame.size.height -= 20;
-    frame.origin.x += 20;
-    frame.origin.y += 20;
-
-    [super setFrame:frame];
-}
 
 @end

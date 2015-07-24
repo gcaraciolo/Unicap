@@ -9,10 +9,12 @@
 #import "GCClassesTableViewController.h"
 #import "GCCurrentSubjectsServices.h"
 #import "GCSubject.h"
+#import "GCClassesTableViewCell.h"
 
 @interface GCClassesTableViewController ()
 
 @property (strong, nonatomic) NSArray *subjects;
+@property (strong, nonatomic) NSArray *days;
 
 @end
 
@@ -25,6 +27,16 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    self.days = @[
+                  @"Segunda-feira",
+                  @"Terça-feira",
+                  @"Quarta-feira",
+                  @"Quinta-feira",
+                  @"Sexta-feira",
+                  @"Sábado"
+                  ];
     
     GCCurrentSubjectsServices *service = [GCCurrentSubjectsServices new];
     [service getInformationsFromCurrentPeriodWithCompletition:^(NSArray *subjects) {
@@ -52,26 +64,28 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return self.subjects.count;
+    return self.days.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"classCellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
+    GCClassesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
     
-//    [self fillCell:cell
-//      forIndexPath:indexPath];
+    [self fillCell:cell
+      forIndexPath:indexPath];
     
     return cell;
 }
 
-- (void)fillCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
+- (void)fillCell:(GCClassesTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
-    GCSubject *subject = self.subjects[indexPath.row];
-    cell.textLabel.text = subject.name;
+//    GCSubject *subject = self.subjects[indexPath.row];
+//    cell.textLabel.text = subject.name;
+    cell.lblDay.text = self.days[indexPath.row];
+
 }
 
 @end

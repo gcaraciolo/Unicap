@@ -10,4 +10,6 @@
 
 @interface GCClassesTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *lblDay;
+
 @end
