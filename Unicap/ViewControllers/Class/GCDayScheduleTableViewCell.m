@@ -35,7 +35,7 @@
     //??needed??
     self.subjects = subjects;
     
-    //TODO: a forin for each subject be shown
+    //TODO: a forin for each subject be shown (dynamic cell)
     GCSubject *subject = subjects[1];
     
     [self.viewDataSource fillViewImage:nil
