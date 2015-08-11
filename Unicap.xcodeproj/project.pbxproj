@@ -32,6 +32,8 @@
 		72C5B7871B55A716006B19D1 /* GCFutureSubjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C5B7861B55A716006B19D1 /* GCFutureSubjectsViewController.m */; };
 		72C5B78B1B55A7E4006B19D1 /* GCTestingScheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72C5B78A1B55A7E4006B19D1 /* GCTestingScheduleViewController.m */; };
 		72D9A0281B61BE7C008FAA7A /* GCDayScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72D9A0271B61BE7C008FAA7A /* GCDayScheduleTableViewCell.m */; };
+		72E41B991B7A91F900B1943B /* GCStudent+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E41B981B7A91F900B1943B /* GCStudent+Extension.m */; };
+		72E41B9E1B7A92CC00B1943B /* GCSubject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E41B9D1B7A92CC00B1943B /* GCSubject+Extension.m */; };
 		72F1011C1B56E94000F7E02A /* GCCurrentSubjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F1011B1B56E94000F7E02A /* GCCurrentSubjectsViewController.m */; };
 		72F101201B56E98600F7E02A /* GCSubjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F1011F1B56E98600F7E02A /* GCSubjectsViewController.m */; };
 		AC391B6D1B41987F000728D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B6C1B41987F000728D5 /* main.m */; };
@@ -111,6 +113,10 @@
 		72D9A0261B61BE7C008FAA7A /* GCDayScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDayScheduleTableViewCell.h; sourceTree = "<group>"; };
 		72D9A0271B61BE7C008FAA7A /* GCDayScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDayScheduleTableViewCell.m; sourceTree = "<group>"; };
 		72E41B961B7A780800B1943B /* Konstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Konstants.h; path = ../Konstants.h; sourceTree = "<group>"; };
+		72E41B971B7A91F900B1943B /* GCStudent+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCStudent+Extension.h"; sourceTree = "<group>"; };
+		72E41B981B7A91F900B1943B /* GCStudent+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GCStudent+Extension.m"; sourceTree = "<group>"; };
+		72E41B9C1B7A92CC00B1943B /* GCSubject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GCSubject+Extension.h"; sourceTree = "<group>"; };
+		72E41B9D1B7A92CC00B1943B /* GCSubject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GCSubject+Extension.m"; sourceTree = "<group>"; };
 		72F1011A1B56E94000F7E02A /* GCCurrentSubjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCCurrentSubjectsViewController.h; sourceTree = "<group>"; };
 		72F1011B1B56E94000F7E02A /* GCCurrentSubjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCurrentSubjectsViewController.m; sourceTree = "<group>"; };
 		72F1011E1B56E98600F7E02A /* GCSubjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSubjectsViewController.h; sourceTree = "<group>"; };
@@ -322,6 +328,7 @@
 		72BACBD11B4213CE00E49DCD /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				72E41B9A1B7A920100B1943B /* Model+Extension */,
 				7216D1271B5DC5D2000818EE /* SubjectDetail */,
 				7262375A1B4C1157009D880E /* TestingSchedule */,
 				726237521B4BFF13009D880E /* FutureSubject */,
@@ -412,6 +419,17 @@
 			children = (
 			);
 			path = "new model";
+			sourceTree = "<group>";
+		};
+		72E41B9A1B7A920100B1943B /* Model+Extension */ = {
+			isa = PBXGroup;
+			children = (
+				72E41B971B7A91F900B1943B /* GCStudent+Extension.h */,
+				72E41B981B7A91F900B1943B /* GCStudent+Extension.m */,
+				72E41B9C1B7A92CC00B1943B /* GCSubject+Extension.h */,
+				72E41B9D1B7A92CC00B1943B /* GCSubject+Extension.m */,
+			);
+			name = "Model+Extension";
 			sourceTree = "<group>";
 		};
 		72EFDE921B61A37600E9A291 /* DayScheduleCell */ = {
@@ -756,10 +774,12 @@
 				728E6E621B4615560089F839 /* GCScheduleUnicap.m in Sources */,
 				726237601B4C11B9009D880E /* GCTestingSchedule.m in Sources */,
 				72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */,
+				72E41B991B7A91F900B1943B /* GCStudent+Extension.m in Sources */,
 				72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */,
 				726237511B4BFEFA009D880E /* GCFutureSubjectsService.m in Sources */,
 				72C5B7871B55A716006B19D1 /* GCFutureSubjectsViewController.m in Sources */,
 				7216D12E1B5DD0CD000818EE /* GCTestingScheduleDetailsViewController.m in Sources */,
+				72E41B9E1B7A92CC00B1943B /* GCSubject+Extension.m in Sources */,
 				7216D12A1B5DC5EB000818EE /* GCSubjectDetails.m in Sources */,
 				72BACBFE1B4332C700E49DCD /* GCUtils.m in Sources */,
 			);

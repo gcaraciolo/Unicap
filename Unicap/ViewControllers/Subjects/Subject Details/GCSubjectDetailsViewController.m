@@ -7,12 +7,14 @@
 //
 
 #import "GCSubjectDetailsViewController.h"
+#import "GCSubject+Extension.h"
 
 @interface GCSubjectDetailsViewController ()
 
 @property (strong, nonatomic) IBOutlet UILabel *lblNome;
 @property (strong, nonatomic) IBOutlet UILabel *lblCodigoDaDisciplina;
 @property (strong, nonatomic) IBOutlet UILabel *lblTurma;
+@property (strong, nonatomic) IBOutlet UILabel *lblBlock;
 @property (strong, nonatomic) IBOutlet UILabel *lblSala;
 @property (strong, nonatomic) IBOutlet UILabel *lblHorario;
 @property (strong, nonatomic) IBOutlet UILabel *lblPeriodo;
@@ -27,7 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self fillLabels];
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +42,8 @@
     _lblNome.text = _subject.name;
     _lblCodigoDaDisciplina.text = _subject.subjectCode;
     _lblTurma.text = _subject.classCode;
-    _lblSala.text = _subject.classroom;
+    _lblBlock.text = [_subject getBlock];
+    _lblSala.text = [_subject getClassroom];
     _lblHorario.text = _subject.schedule;
     _lblPeriodo.text = _subject.period;
 }

@@ -10,10 +10,5 @@
 
 @implementation GCSubject
 
-- (NSInteger)numberOfClassesPerWeek {
-    //TODO
-    return  2;
-}
-
 
 @end

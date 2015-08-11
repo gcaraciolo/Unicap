@@ -29,6 +29,4 @@
 @property (strong, nonatomic) NSString  *currentSituation;
 @property (strong, nonatomic) NSString  *pastSituation;
 
-- (NSInteger)numberOfClassesPerWeek;
-
 @end
