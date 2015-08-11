@@ -25,27 +25,20 @@
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     
     GCLoggerInfo(@"viewDidLoad");
-//    self.subjects = @[@"hhhasdasdadsadasdadaadasdd",
-//                      @"hhhasdasdadsadasdadaadasdd",
-//                      @"hhhahsdasdadsadasdadaadasd",
-//                      @"hhhasdasdadsadasdadaadasdd",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad"
-//                      ];
-//    
-        GCFutureSubjectsService *futureSubjects = [GCFutureSubjectsService new];
-        [futureSubjects getFutureSubjectsWithCompletition:^(NSArray *subjects) {
-
-            GCLoggerInfo(@"received future subjects");
-            self.subjects = subjects;
-            [self.tableView reloadData];    
-        } failure:^(NSError *error) {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-            GCLoggerError(@"%@", error);
-        }];
+    GCFutureSubjectsService *futureSubjects = [GCFutureSubjectsService new];
+    [futureSubjects getFutureSubjectsWithCompletition:^(NSArray *subjects) {
+
+        GCLoggerInfo(@"received future subjects");
+        self.subjects = subjects;
+        [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    } failure:^(NSError *error) {
+
+        GCLoggerError(@"%@", error);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -124,14 +117,7 @@
     
     GCSubjectDetailsViewController *subjectDetailsVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([GCSubjectDetailsViewController class])];
     
-    GCSubjectDetails *subjectDetails = [GCSubjectDetails new];
-    GCFutureSubject *futureSubject = self.subjects[indexPath.row];
-    subjectDetails.name = futureSubject.name;
-    subjectDetails.code = futureSubject.code;
-    subjectDetails.period = futureSubject.period;
-    
-    subjectDetailsVC.subjectDetails = subjectDetails;
-    
+  
     [self.navigationController pushViewController:subjectDetailsVC
                                          animated:YES];
     

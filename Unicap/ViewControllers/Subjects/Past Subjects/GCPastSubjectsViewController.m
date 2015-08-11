@@ -27,19 +27,8 @@
     [super viewDidLoad];
     
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    
-    GCLoggerInfo(@"viewDidLoad");
-    
-//    self.subjects = @[@"hhhasdasdadsadasdadaadasdd",
-//                          @"hhhasdasdadsadasdadaadasdd",
-//                          @"hhhahsdasdadsadasdadaadasd",
-//                          @"hhhasdasdadsadasdadaadasdd",
-//                          @"asdasdadsadasdadaadasddsad",
-//                          @"asdasdadsadasdadaadasddsad",
-//                          @"asdasdadsadasdadaadasddsad",
-//                          @"asdasdadsadasdadaadasddsad",
-//                          @"asdasdadsadasdadaadasddsad"
-//                         ];
+
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     GCPastSubjectsService *pastSubjects = [GCPastSubjectsService new];
     [pastSubjects getPastSubjectsWithCompletition:^(NSArray *subjects) {
@@ -47,9 +36,10 @@
         GCLoggerInfo(@"received past subjects");
         self.subjects = subjects;
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     } failure:^(NSError *error) {
-
         GCLoggerError(@"%@",error);
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
 
 
@@ -126,14 +116,6 @@
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle:[NSBundle mainBundle]];
     
     GCSubjectDetailsViewController *subjectDetailsVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([GCSubjectDetailsViewController class])];
-    
-    GCSubjectDetails *subjectDetails = [GCSubjectDetails new];
-    GCPastSubject *pastSubject = self.subjects[indexPath.row];
-    subjectDetails.name = pastSubject.name;
-    subjectDetails.code = pastSubject.code;
-    subjectDetails.period = pastSubject.period;
-
-    subjectDetailsVC.subjectDetails = subjectDetails;
     
     [self.navigationController pushViewController:subjectDetailsVC
                                          animated:YES];

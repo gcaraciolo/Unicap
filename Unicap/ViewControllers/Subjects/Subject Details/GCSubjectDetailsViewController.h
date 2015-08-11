@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GCSubjectDetails.h"
+#import "GCSubject.h"
 
 @interface GCSubjectDetailsViewController : UIViewController
 
-@property (strong, nonatomic) GCSubjectDetails *subjectDetails;
+@property (strong, nonatomic) GCSubject *subject;
 
 @end

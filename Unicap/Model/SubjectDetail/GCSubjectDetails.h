@@ -10,8 +10,11 @@
 
 @interface GCSubjectDetails : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *code;
-@property (strong, nonatomic) NSString *period;
+@property (strong, nonatomic)  NSString *name;
+@property (strong, nonatomic)  NSString *subjectCode;
+@property (strong, nonatomic)  NSString *classCode;
+@property (strong, nonatomic)  NSString *classroom;
+@property (strong, nonatomic)  NSString *scheduling;
+@property (strong, nonatomic)  NSString *period;
 
 @end

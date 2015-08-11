@@ -118,7 +118,6 @@
 		72F1011B1B56E94000F7E02A /* GCCurrentSubjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCurrentSubjectsViewController.m; sourceTree = "<group>"; };
 		72F1011E1B56E98600F7E02A /* GCSubjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSubjectsViewController.h; sourceTree = "<group>"; };
 		72F1011F1B56E98600F7E02A /* GCSubjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCSubjectsViewController.m; sourceTree = "<group>"; };
-		72F101211B573E6B00F7E02A /* GCSubjectsSegmentedControlProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSubjectsSegmentedControlProtocol.h; sourceTree = "<group>"; };
 		97E43F6227A4BA07C5C2C831 /* Pods-Unicap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unicap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unicap/Pods-Unicap.debug.xcconfig"; sourceTree = "<group>"; };
 		AC391B671B41987F000728D5 /* Unicap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unicap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC391B6B1B41987F000728D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -457,7 +456,6 @@
 		72F1011D1B56E96500F7E02A /* Subjects */ = {
 			isa = PBXGroup;
 			children = (
-				72F101211B573E6B00F7E02A /* GCSubjectsSegmentedControlProtocol.h */,
 				72F1011E1B56E98600F7E02A /* GCSubjectsViewController.h */,
 				72F1011F1B56E98600F7E02A /* GCSubjectsViewController.m */,
 				72C5B7801B55A648006B19D1 /* Past Subjects */,
@@ -662,6 +660,7 @@
 		AC391B5F1B41987F000728D5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = GC;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Guilherme Caraciolo";
 				TargetAttributes = {

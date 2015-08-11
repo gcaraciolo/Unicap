@@ -20,19 +20,13 @@
 
 @implementation GCCurrentSubjectsViewController
 
+#pragma mark - Lifecycle
+
 -(void)viewDidLoad {
     [super viewDidLoad];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-//    self.subjects = @[@"hhhasdasdadsadasdadaadasdd",
-//                      @"hhhasdasdadsadasdadaadasdd",
-//                      @"hhhahsdasdadsadasdadaadasd",
-//                      @"hhhasdasdadsadasdadaadasdd",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad",
-//                      @"asdasdadsadasdadaadasddsad"
-//                      ];
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     GCCurrentSubjectsServices *currentSubjectsService = [GCCurrentSubjectsServices new];
     [currentSubjectsService getInformationsFromCurrentPeriodWithCompletition:^(NSArray *subjects) {
@@ -40,8 +34,9 @@
         GCLoggerInfo(@"received current subjects");
         self.subjects = subjects;
         [self.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     } failure:^(NSError *error) {
-        
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
     
@@ -123,14 +118,9 @@
     
     GCSubjectDetailsViewController *subjectDetailsVC = [storyboard instantiateViewControllerWithIdentifier:NSStringFromClass([GCSubjectDetailsViewController class])];
     
-    GCSubjectDetails *subjectDetails = [GCSubjectDetails new];
     GCSubject *subject = self.subjects[indexPath.row];
-    subjectDetails.name = subject.name;
-    subjectDetails.code = subject.code;
-//    subjectDetails.period = subject.period;
-    
-    subjectDetailsVC.subjectDetails = subjectDetails;
-    
+    subjectDetailsVC.subject = subject;
+
     [self.navigationController pushViewController:subjectDetailsVC
                                          animated:YES];
     

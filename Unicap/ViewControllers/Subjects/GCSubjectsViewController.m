@@ -7,7 +7,6 @@
 //
 
 #import "GCSubjectsViewController.h"
-#import "GCSubjectsSegmentedControlProtocol.h"
 
 #import "GCPastSubjectsViewController.h"
 #import "GCCurrentSubjectsViewController.h"

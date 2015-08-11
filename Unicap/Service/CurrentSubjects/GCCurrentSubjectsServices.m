@@ -164,7 +164,7 @@
     formatter.numberStyle = NSNumberFormatterDecimalStyle;
     
     if (subjectAsArray[0]) {
-        subject.code            = subjectAsArray[0];
+        subject.subjectCode            = subjectAsArray[0];
     }
     if (subjectAsArray[1]) {
         subject.name            = subjectAsArray[1];
@@ -173,12 +173,13 @@
         subject.classCode       = subjectAsArray[2];
     }
     if (subjectAsArray[3]) {
-        subject.classLocation    = subjectAsArray[3];
+        subject.classroom    = subjectAsArray[3];
     }
     if (subjectAsArray[4]) {
-        NSArray *times = [subjectAsArray[4] componentsSeparatedByCharactersInSet:
-                            [NSCharacterSet characterSetWithCharactersInString:@" "]];
-        subject.schedule         = times;
+        subject.schedule         = subjectAsArray[4];
+//        NSArray *times = [subjectAsArray[4] componentsSeparatedByCharactersInSet:
+//                            [NSCharacterSet characterSetWithCharactersInString:@" "]];
+//        subject.schedule         = times;
     }
     if (subjectAsArray[5] && ![subjectAsArray[5] isEqualToString:@"--"]) {
         subject.workload      = [formatter numberFromString:subjectAsArray[5]];
@@ -200,7 +201,7 @@
     GCSubject *subject;
     
     for (GCSubject *s in self.currentSubjects) {
-        if([s.code isEqualToString:subjectAsArray[0]]) {
+        if([s.subjectCode isEqualToString:subjectAsArray[0]]) {
             subject = s;
         }
     }

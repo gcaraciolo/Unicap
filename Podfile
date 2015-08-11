@@ -7,6 +7,7 @@ pod "AFNetworking", "~> 2.0"
 pod "HTMLReader"
 pod 'RESideMenu', '~> 4.0.7'
 pod "MagicalRecord"
+pod 'MBProgressHUD', '~> 0.9.1'
 
 end
 

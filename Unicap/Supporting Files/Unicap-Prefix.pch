@@ -18,6 +18,7 @@
 #import "GCConstants.h"
 #import "GCStudentCredentials.h"
 #import "GCUtils.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 
 
 
