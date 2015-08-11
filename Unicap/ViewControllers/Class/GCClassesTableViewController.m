@@ -15,9 +15,7 @@
 @interface GCClassesTableViewController ()
 
 @property (strong, nonatomic) NSArray *days;
-
 @property (strong, nonatomic) GCStudent *student;
-
 
 @end
 
@@ -30,31 +28,23 @@ static NSString *CellIdentifier = @"classCellID";
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    self.days = @[
-                  @"Segunda-feira",
-                  @"Terça-feira",
-                  @"Quarta-feira",
-                  @"Quinta-feira",
-                  @"Sexta-feira",
-                  @"Sábado"
-                  ];
-    
-    self.student = [GCStudent new];
+    [self setUpTableView];
+    [self setUpData];
     
     GCCurrentSubjectsServices *service = [GCCurrentSubjectsServices new];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     [service getInformationsFromCurrentPeriodWithCompletition:^(NSArray *subjects) {
 
-        self.student.currentSubjects = subjects;
-        [self.tableView reloadData];
+        GCLoggerInfo(@"receive subjects");
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     } failure:^(NSError *error) {
         
+        GCLoggerError(@"error in request of class");
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     }];
     
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
+
     
 }
 
@@ -67,13 +57,12 @@ static NSString *CellIdentifier = @"classCellID";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
     return self.days.count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray *subjectsFromOneDay = self.student.currentSubjects[section];
-    return subjectsFromOneDay.count;
+//TODO: colocar quantas cadeiras tem no dia.
+    return 2;
 }
 -(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 44.0;
@@ -84,20 +73,40 @@ static NSString *CellIdentifier = @"classCellID";
     GCDayScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
     
-    [self fillCell:cell
-      forIndexPath:indexPath];
-    
+    [self fillCell:cell forIndexPath:indexPath];
     return cell;
 }
 
 - (void)fillCell:(GCDayScheduleTableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath {
     
-    cell.lblDay.text = self.days[indexPath.row];
+//    cell.lblDay.text = self.days[indexPath.row];
+//
+//    //TODO:
+//    [cell fillCellWithSubjects:[self.student getSubjectsFromDay:indexPath.row]];
+////    [cell fillCellWithSubject:self.student.currentSubjects[indexPath.row]];
 
-    //TODO:
-    [cell fillCellWithSubjects:[self.student getSubjectsFromDay:indexPath.row]];
-//    [cell fillCellWithSubject:self.student.currentSubjects[indexPath.row]];
+}
 
+#pragma mark - Helper Methods
+
+- (void)setUpData {
+    
+    self.days = @[
+                  @"Segunda-feira",
+                  @"Terça-feira",
+                  @"Quarta-feira",
+                  @"Quinta-feira",
+                  @"Sexta-feira",
+                  @"Sábado"
+                  ];
+}
+
+- (void)setUpTableView {
+    self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
 }
 
 @end

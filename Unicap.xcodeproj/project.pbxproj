@@ -23,7 +23,6 @@
 		7292A3871B5ED8C40060942C /* GCClassesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292A3861B5ED8C40060942C /* GCClassesTableViewController.m */; };
 		7292A38B1B608A500060942C /* GCClassScheduleSingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7292A38A1B608A500060942C /* GCClassScheduleSingleView.m */; };
 		72BACBD41B42140000E49DCD /* GCStudentCredentials.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBD31B42140000E49DCD /* GCStudentCredentials.m */; };
-		72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBE41B4227B600E49DCD /* GCRequestError.m */; };
 		72BACBEB1B42A18D00E49DCD /* GCStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEA1B42A18D00E49DCD /* GCStudent.m */; };
 		72BACBEF1B42A28700E49DCD /* GCSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBEE1B42A28700E49DCD /* GCSubject.m */; };
 		72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72BACBF51B42AB1C00E49DCD /* GCLeftMenuViewController.m */; };
@@ -93,8 +92,6 @@
 		7292A38A1B608A500060942C /* GCClassScheduleSingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCClassScheduleSingleView.m; sourceTree = "<group>"; };
 		72BACBD21B42140000E49DCD /* GCStudentCredentials.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudentCredentials.h; sourceTree = "<group>"; };
 		72BACBD31B42140000E49DCD /* GCStudentCredentials.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudentCredentials.m; sourceTree = "<group>"; };
-		72BACBE31B4227B600E49DCD /* GCRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCRequestError.h; sourceTree = "<group>"; };
-		72BACBE41B4227B600E49DCD /* GCRequestError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCRequestError.m; sourceTree = "<group>"; };
 		72BACBE91B42A18D00E49DCD /* GCStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCStudent.h; sourceTree = "<group>"; };
 		72BACBEA1B42A18D00E49DCD /* GCStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCStudent.m; sourceTree = "<group>"; };
 		72BACBED1B42A28700E49DCD /* GCSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSubject.h; sourceTree = "<group>"; };
@@ -337,23 +334,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		72BACBD61B42153900E49DCD /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				72BACBE21B42279D00E49DCD /* Error */,
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		72BACBE21B42279D00E49DCD /* Error */ = {
-			isa = PBXGroup;
-			children = (
-				72BACBE31B4227B600E49DCD /* GCRequestError.h */,
-				72BACBE41B4227B600E49DCD /* GCRequestError.m */,
-			);
-			path = Error;
-			sourceTree = "<group>";
-		};
 		72BACBE61B42A16100E49DCD /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,7 +518,6 @@
 				ACBF317E1B41C55B00BB12BE /* Base */,
 				726237561B4C1082009D880E /* TestingSchedule */,
 				7218B7091B435E7100C53BCC /* CurrentSubjects */,
-				72BACBD61B42153900E49DCD /* Utils */,
 				728E6E631B4618E40089F839 /* Student */,
 				7262374E1B4BFEE7009D880E /* FutureSubjects */,
 				7218B7051B43548A00C53BCC /* Past Subjects */,
@@ -750,7 +729,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */,
 				ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */,
 				7292A38B1B608A500060942C /* GCClassScheduleSingleView.m in Sources */,
 				72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */,

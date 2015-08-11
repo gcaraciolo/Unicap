@@ -13,7 +13,7 @@
 
 + (BOOL)validateString:(NSString *)string withPattern:(NSString *)pattern;
 
-+ (NSArray *)createTableFromArray:(NSArray *)array withRowSize:(int)rowSize;
++ (NSArray *)createTableFromArray:(NSArray *)array numberOfColumns:(int)numberOfColumns;
 
 + (NSString *)contentValueFromHTMLElement:(HTMLElement *)element;
 

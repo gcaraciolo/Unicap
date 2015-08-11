@@ -62,7 +62,7 @@
     NSArray *allElements = [tableElements nodesMatchingSelector:@".tab_texto"];
     
     NSArray *tableContents = [GCUtils createTableFromArray:allElements
-                                               withRowSize:8];
+                                               numberOfColumns:8];
     
     [self fillStudentFutureSubjects:tableContents];
 }

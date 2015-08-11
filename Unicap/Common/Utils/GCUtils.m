@@ -57,7 +57,7 @@
             if (count == index) {
                 return node;
             }
-            NSLog(@"%@, %d", node, count);
+            NSLog(@"%@, use this node -> %d", node, count);
             count++;
         }
         
@@ -67,20 +67,20 @@
 
 /*
  * @array big array
- * @rowSize size of each row in the new table
+ * @numberOfColumns number of columns in each row
  * 
  * return a table (matrix) base on passed array and its row size
  *
  */
 
-+ (NSArray *)createTableFromArray:(NSArray *)array withRowSize:(int)rowSize {
++ (NSArray *)createTableFromArray:(NSArray *)array numberOfColumns:(int)numberOfColumns {
     
     NSMutableArray *table = [NSMutableArray new];
     NSMutableArray *row = [NSMutableArray new];
     
     int count = 0;
     for (id obj in array) {
-        if (count == rowSize) {
+        if (count == numberOfColumns) {
             [table addObject:row];
             count = 0;
             row = [NSMutableArray new];
