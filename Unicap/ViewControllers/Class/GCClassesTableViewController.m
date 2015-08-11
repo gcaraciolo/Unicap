@@ -23,6 +23,8 @@
 
 @implementation GCClassesTableViewController
 
+static NSString *CellIdentifier = @"classCellID";
+
 #pragma mark - Lifecycle
 
 - (void)viewDidLoad {
@@ -52,6 +54,8 @@
         
     }];
     
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -64,18 +68,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
     return self.days.count;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray *subjectsFromOneDay = self.student.currentSubjects[section];
+    return subjectsFromOneDay.count;
+}
+-(CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44.0;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *CellIdentifier = @"classCellID";
     GCDayScheduleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier
                                                             forIndexPath:indexPath];
     

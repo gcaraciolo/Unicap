@@ -12,8 +12,6 @@
 
 @implementation GCStudentService
 
-
-//TODO: change nsmutableset to gcstudent
 - (void)getStudentInformationsWithCompletition:(void (^)(GCStudent *))completition
                                        failure:(void (^)(NSError *))failure {
     

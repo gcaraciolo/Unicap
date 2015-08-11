@@ -17,7 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    GCLoggerInfo(@"%@", self.subjectDetails.name);
+    GCLoggerInfo(@"%@", self.subjectDetails);
 
 }
 

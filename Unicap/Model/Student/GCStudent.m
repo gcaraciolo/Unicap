@@ -32,8 +32,13 @@
 
 - (NSArray *)getSubjectsFromDay:(NSInteger)day {
     //TODO
-    
-    return [self.currentSubjects copy];
+    if (! self.currentSubjects) {
+        return nil;
+    }
+    NSMutableArray *twoSubjects = [NSMutableArray new];
+    [twoSubjects addObject:self.currentSubjects[0]];
+    [twoSubjects addObject:self.currentSubjects[1]];
+    return [twoSubjects copy];
 }
 
 

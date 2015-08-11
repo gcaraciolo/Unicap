@@ -32,6 +32,47 @@
     return didValidate;
 }
 
+/*
+ * @document a html page
+ * @tag a html tag
+ * @index the index of the tag
+ *
+ *
+ * return a HTMLElement from passed tag
+ */
+
+
++ (HTMLElement *)findElementFromDocument:(HTMLDocument *)document
+                                 WithTag:(NSString *)tag
+                                 atIndex:(int)index {
+    
+    HTMLSelector *selector = [HTMLSelector selectorForString:tag];
+    
+    int count = 0;
+    for (HTMLElement *node in document.treeEnumerator) {
+        
+        if ([node isKindOfClass:[HTMLElement class]] &&
+            [selector matchesElement:node]) {
+            
+            if (count == index) {
+                return node;
+            }
+            NSLog(@"%@, %d", node, count);
+            count++;
+        }
+        
+    }
+    return nil;
+}
+
+/*
+ * @array big array
+ * @rowSize size of each row in the new table
+ * 
+ * return a table (matrix) base on passed array and its row size
+ *
+ */
+
 + (NSArray *)createTableFromArray:(NSArray *)array withRowSize:(int)rowSize {
     
     NSMutableArray *table = [NSMutableArray new];
@@ -52,6 +93,13 @@
     return [table copy];
 }
 
+/*
+ * @element and HTMLElement
+ *
+ * return a string with just the elemenent content. (remove white spaces)
+ *
+ */
+
 + (NSString *)contentValueFromHTMLElement:(HTMLElement *)element {
     NSString *string = element.textContent;
     NSString *trimmedString = [string stringByTrimmingCharactersInSet:
@@ -61,28 +109,7 @@
 }
 
 
-+ (HTMLElement *)findElementFromDocument:(HTMLDocument *)document
-                                WithTag:(NSString *)tag
-                                atIndex:(int)index {
-    
-    HTMLSelector *selector = [HTMLSelector selectorForString:tag];
-    
-    int count = 0;
-    for (HTMLElement *node in document.treeEnumerator) {
-        
-        if ([node isKindOfClass:[HTMLElement class]] &&
-            [selector matchesElement:node]) {
-            
-            if (count == index) {
-                return node;
-            }
-            NSLog(@"%@, %d", node, count);
-            count++;
-        }
-        
-    }
-    return nil;
-}
+
 
 
 

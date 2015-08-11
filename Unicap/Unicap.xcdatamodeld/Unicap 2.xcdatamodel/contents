@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Student" representedClassName="Student" syncable="YES">
+        <attribute name="birthday" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="birthplace" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="breed" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cellphoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cep" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="civilStatus" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="commercialphoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="course" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="courseCoefficient" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cpf" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="curriculum" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="digit" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fatherName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="gender" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="homephoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="identity" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastCoefficient" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="motherName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="neighborhood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="registation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="religion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shift" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="street" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uf" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="subjects" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Subject" inverseName="student" inverseEntity="Subject" syncable="YES"/>
+    </entity>
+    <entity name="Subject" representedClassName="Subject" syncable="YES">
+        <attribute name="average" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blockLetter" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="codeOfClass" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="credits" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="didCourse" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="finalAverage" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="finalGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="period" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roomNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="secondGrade" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="situation" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="workload" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="subjects" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="1737" positionY="378" width="128" height="478"/>
+        <element name="Subject" positionX="1951" positionY="387" width="128" height="283"/>
+    </elements>
+</model>

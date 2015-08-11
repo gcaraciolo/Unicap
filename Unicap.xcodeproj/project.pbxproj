@@ -37,7 +37,6 @@
 		72F101201B56E98600F7E02A /* GCSubjectsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F1011F1B56E98600F7E02A /* GCSubjectsViewController.m */; };
 		AC391B6D1B41987F000728D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B6C1B41987F000728D5 /* main.m */; };
 		AC391B701B41987F000728D5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC391B6F1B41987F000728D5 /* AppDelegate.m */; };
-		AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC391B711B419880000728D5 /* Unicap.xcdatamodeld */; };
 		AC391B791B419880000728D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC391B771B419880000728D5 /* Main.storyboard */; };
 		AC391B7B1B419880000728D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC391B7A1B419880000728D5 /* Images.xcassets */; };
 		AC391B7E1B419880000728D5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC391B7C1B419880000728D5 /* LaunchScreen.xib */; };
@@ -114,6 +113,7 @@
 		72C5B78A1B55A7E4006B19D1 /* GCTestingScheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCTestingScheduleViewController.m; sourceTree = "<group>"; };
 		72D9A0261B61BE7C008FAA7A /* GCDayScheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDayScheduleTableViewCell.h; sourceTree = "<group>"; };
 		72D9A0271B61BE7C008FAA7A /* GCDayScheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDayScheduleTableViewCell.m; sourceTree = "<group>"; };
+		72E41B961B7A780800B1943B /* Konstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Konstants.h; path = ../Konstants.h; sourceTree = "<group>"; };
 		72F1011A1B56E94000F7E02A /* GCCurrentSubjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCCurrentSubjectsViewController.h; sourceTree = "<group>"; };
 		72F1011B1B56E94000F7E02A /* GCCurrentSubjectsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCCurrentSubjectsViewController.m; sourceTree = "<group>"; };
 		72F1011E1B56E98600F7E02A /* GCSubjectsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCSubjectsViewController.h; sourceTree = "<group>"; };
@@ -125,7 +125,6 @@
 		AC391B6C1B41987F000728D5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC391B6E1B41987F000728D5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC391B6F1B41987F000728D5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AC391B721B419880000728D5 /* Unicap.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Unicap.xcdatamodel; sourceTree = "<group>"; };
 		AC391B781B419880000728D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC391B7A1B419880000728D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC391B7D1B419880000728D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -272,6 +271,7 @@
 		728E6E5E1B4613040089F839 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				72E41B961B7A780800B1943B /* Konstants.h */,
 				726237641B4C1B59009D880E /* Constants */,
 				ACDC663E1B42E7710055D494 /* Utils */,
 				ACDC66381B42D93D0055D494 /* Logger */,
@@ -320,8 +320,7 @@
 				7292A3891B608A500060942C /* GCClassScheduleSingleView.h */,
 				7292A38A1B608A500060942C /* GCClassScheduleSingleView.m */,
 			);
-			name = ClassScheduleView;
-			path = ../../View/ClassScheduleView;
+			path = ClassScheduleView;
 			sourceTree = "<group>";
 		};
 		72BACBD11B4213CE00E49DCD /* Model */ = {
@@ -429,6 +428,13 @@
 			path = "Testing Schedule";
 			sourceTree = "<group>";
 		};
+		72D5996B1B72A12500D1F0FE /* new model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "new model";
+			sourceTree = "<group>";
+		};
 		72EFDE921B61A37600E9A291 /* DayScheduleCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -436,9 +442,8 @@
 				72D9A0261B61BE7C008FAA7A /* GCDayScheduleTableViewCell.h */,
 				72D9A0271B61BE7C008FAA7A /* GCDayScheduleTableViewCell.m */,
 			);
-			name = DayScheduleCell;
-			path = Unicap/ViewControllers/Class;
-			sourceTree = SOURCE_ROOT;
+			path = DayScheduleCell;
+			sourceTree = "<group>";
 		};
 		72F101191B56E92F00F7E02A /* Current Subjects */ = {
 			isa = PBXGroup;
@@ -486,6 +491,7 @@
 		AC391B691B41987F000728D5 /* Unicap */ = {
 			isa = PBXGroup;
 			children = (
+				72D5996B1B72A12500D1F0FE /* new model */,
 				AC391B6E1B41987F000728D5 /* AppDelegate.h */,
 				AC391B6F1B41987F000728D5 /* AppDelegate.m */,
 				728E6E5E1B4613040089F839 /* Common */,
@@ -496,7 +502,6 @@
 				AC391B771B419880000728D5 /* Main.storyboard */,
 				AC391B7A1B419880000728D5 /* Images.xcassets */,
 				AC391B7C1B419880000728D5 /* LaunchScreen.xib */,
-				AC391B711B419880000728D5 /* Unicap.xcdatamodeld */,
 				AC391B6A1B41987F000728D5 /* Supporting Files */,
 			);
 			path = Unicap;
@@ -749,7 +754,6 @@
 				72BACBE51B4227B600E49DCD /* GCRequestError.m in Sources */,
 				ACDC663C1B42D9550055D494 /* GCLogger.m in Sources */,
 				7292A38B1B608A500060942C /* GCClassScheduleSingleView.m in Sources */,
-				AC391B731B419880000728D5 /* Unicap.xcdatamodeld in Sources */,
 				72BACBF61B42AB1C00E49DCD /* GCLeftMenuViewController.m in Sources */,
 				7292A3871B5ED8C40060942C /* GCClassesTableViewController.m in Sources */,
 				AC99E1D71B4B0D1D0099FD34 /* GCPastSubject.m in Sources */,
@@ -997,19 +1001,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		AC391B711B419880000728D5 /* Unicap.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				AC391B721B419880000728D5 /* Unicap.xcdatamodel */,
-			);
-			currentVersion = AC391B721B419880000728D5 /* Unicap.xcdatamodel */;
-			path = Unicap.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = AC391B5F1B41987F000728D5 /* Project object */;
 }

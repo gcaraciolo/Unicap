@@ -6,6 +6,7 @@ target 'Unicap' do
 pod "AFNetworking", "~> 2.0"
 pod "HTMLReader"
 pod 'RESideMenu', '~> 4.0.7'
+pod "MagicalRecord"
 
 end
 
